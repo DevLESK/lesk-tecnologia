@@ -49,30 +49,37 @@ Todos os botões usam essa configuração. Enquanto um contato estiver vazio ou 
 
 ## Imagens e vídeos
 
-Coloque imagens reais em `assets/images/` e vídeos em `assets/videos/`. Em `index.html`, localize `demo-agenda`, `demo-vitrine`, `demo-financeiro` ou `demo-comercio`. Substitua apenas o bloco `div.media-placeholder` correspondente por mídia real. Preserve o ID do artigo para não quebrar os links “Conhecer”.
+Pastas: `assets/images/` (screenshots e posters) e `assets/videos/` (MP4 e VTT).
+Studio Agenda e LESK Vitrine estão prontos em `#demo-agenda` e `#demo-vitrine`. Os comentários no HTML indicam o ponto de inserção. Enquanto não houver arquivo real, mantenha o placeholder. Não referencie mídia inexistente.
 
-Exemplo de imagem (o arquivo abaixo é ilustrativo e ainda não existe):
+Arquivos previstos:
+
+| Produto | Screenshot | Poster | Vídeo | Legenda |
+| --- | --- | --- | --- | --- |
+| Studio Agenda | `assets/images/studio-agenda.webp` | `assets/images/studio-agenda-poster.webp` | `assets/videos/studio-agenda.mp4` | `assets/videos/studio-agenda.pt-BR.vtt` |
+| LESK Vitrine | `assets/images/lesk-vitrine.webp` | `assets/images/lesk-vitrine-poster.webp` | `assets/videos/lesk-vitrine.mp4` | `assets/videos/lesk-vitrine.pt-BR.vtt` |
+
+1. Grave os arquivos reais nesses caminhos.
+2. Em `index.html`, apague o conteúdo visível de `.media-placeholder` (ícone, texto e `<small>`).
+3. Descomente **imagem** ou **vídeo** (não os dois).
+4. Preencha `alt` / `aria-label`. Preserve o `id` do artigo.
+
+Imagem:
 
 ```html
-<img src="assets/images/studio-agenda.webp"
-     alt="Descreva a tela real e as informações relevantes exibidas"
-     width="1280" height="720" loading="lazy" decoding="async">
+<img src="assets/images/studio-agenda.webp" alt="Descreva a tela real" width="1280" height="720" loading="lazy" decoding="async">
 ```
 
-Exemplo de vídeo (adicione os arquivos reais antes de usar):
+Vídeo, poster e legenda:
 
 ```html
-<video controls preload="none" playsinline
-       poster="assets/images/studio-agenda.webp"
-       aria-label="Apresentação do STUDIO AGENDA">
+<video controls preload="none" playsinline poster="assets/images/studio-agenda-poster.webp" aria-label="Demonstração do Studio Agenda">
   <source src="assets/videos/studio-agenda.mp4" type="video/mp4">
-  <track kind="captions" src="assets/videos/studio-agenda.pt-BR.vtt"
-         srclang="pt-BR" label="Português" default>
-  Seu navegador não suporta vídeo HTML5.
+  <track kind="captions" src="assets/videos/studio-agenda.pt-BR.vtt" srclang="pt-BR" label="Português" default>
 </video>
 ```
 
-Use imagens WebP/AVIF otimizadas, dimensões reais e texto alternativo descritivo. Prefira proporção 16:9. Comprima vídeos, não use autoplay, forneça legendas e transcrição para conteúdo falado; descreva informações visuais relevantes. Remova dados pessoais e sensíveis de screenshots. Não deixe referências a arquivos inexistentes.
+Proporção 16:9, sem autoplay. Remova dados pessoais dos screenshots. Financeiro e Comércio continuam só com placeholder.
 
 ## SEO e acessibilidade
 
