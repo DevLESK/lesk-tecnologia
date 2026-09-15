@@ -104,7 +104,7 @@ p {
 }
 
 .section {
-    padding-block: 100px
+    padding-block: 84px;
 }
 
 .eyebrow {
@@ -760,8 +760,8 @@ p {
 
 .solutions,
 .demos {
-    border-block: 1px solid #1e2822;
-    background: #0e120f
+    border-block: 1px solid #1b241f;
+    background: #0c100e;
 }
 
 .section-heading {
@@ -769,7 +769,7 @@ p {
     align-items: end;
     justify-content: space-between;
     gap: 32px;
-    margin-bottom: 42px
+    margin-bottom: 34px;
 }
 
 .section-heading>p {
@@ -791,11 +791,11 @@ p {
     min-width: 0;
     display: flex;
     flex-direction: column;
-    padding: 28px 24px 24px;
-    border: 1px solid rgba(var(--product-rgb), .38);
-    border-radius: 14px;
-    background: radial-gradient(ellipse at 12% 0%, rgba(var(--product-rgb), .13), transparent 58%), #111416;
-    box-shadow: inset 0 1px 0 rgba(255,255,255,.045), 0 12px 28px rgba(0,0,0,.18);
+    padding: 26px 24px 22px;
+    border: 1px solid rgba(var(--product-rgb), .2);
+    border-radius: 12px;
+    background: radial-gradient(ellipse at 15% 0%, rgba(var(--product-rgb), .2), transparent 55%), #101412;
+    box-shadow: inset 0 1px 0 rgba(var(--product-rgb), .2);
     transition: border-color .18s, box-shadow .18s;
 }
 .solutions .product-card.vitrine { --product-rgb: 70, 145, 255; --product-ink: #91baff; }
@@ -803,38 +803,38 @@ p {
 .solutions .product-card.comercio { --product-rgb: 255, 170, 0; --product-ink: #ffb000; }
 .solutions .product-card:hover,
 .solutions .product-card:focus-within {
-    border-color: rgba(var(--product-rgb), .68);
-    box-shadow: inset 0 1px 0 rgba(255,255,255,.06), 0 12px 30px rgba(0,0,0,.24);
+    border-color: rgba(var(--product-rgb), .46);
+    box-shadow: inset 0 1px 0 rgba(var(--product-rgb), .4), 0 10px 24px rgba(0,0,0,.15);
 }
 .solutions .product-icon {
     display: grid;
-    place-items: center;
+    place-items: center start;
     width: 56px;
     height: 56px;
     flex-shrink: 0;
-    margin-bottom: 28px;
-    border: 1px solid rgba(var(--product-rgb), .46);
-    border-radius: 13px;
-    background: linear-gradient(145deg, rgba(var(--product-rgb), .2), rgba(var(--product-rgb), .06));
+    margin-bottom: 20px;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
     color: var(--product-ink);
-    box-shadow: inset 0 1px 0 rgba(255,255,255,.08);
-    font-size: 2rem;
+    box-shadow: none;
+    font-size: 2.6rem;
     font-weight: 600;
     line-height: 1;
 }
 .solutions .category {
-    min-height: 2.8em;
-    margin-bottom: 10px;
+    min-height: 1.4em;
+    margin-bottom: 12px;
     color: var(--product-ink);
-    font-size: .7rem;
+    font-size: .68rem;
     font-weight: 600;
     line-height: 1.4;
-    letter-spacing: .075em;
+    letter-spacing: .09em;
 }
 .solutions .product-card h3 {
-    min-height: 2.4em;
+    min-height: 1.2em;
     color: #f2f4f3;
-    font-size: 1.1rem;
+    font-size: 1.12rem;
     font-weight: 700;
     line-height: 1.2;
     letter-spacing: -.02em;
@@ -842,7 +842,7 @@ p {
 }
 .solutions .product-description {
     min-height: 6.4em;
-    margin: 14px 0 0;
+    margin: 12px 0 0;
     color: #b7c0c6;
     font-size: .9rem;
     line-height: 1.6;
@@ -850,16 +850,16 @@ p {
 .solutions .product-features {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 8px;
     list-style: none;
-    margin: 22px 0 26px;
-    padding: 20px 0 0;
-    border-top: 1px solid rgba(var(--product-rgb), .16);
+    margin: 18px 0 24px;
+    padding: 0;
+    border-top: 0;
 }
 .solutions .product-features li {
     position: relative;
     padding-left: 18px;
-    color: #d0d7db;
+    color: #b9c5bd;
     font-size: .82rem;
     line-height: 1.5;
 }
@@ -878,10 +878,10 @@ p {
     gap: 12px;
     min-height: 46px;
     margin-top: auto;
-    padding: 11px 14px;
-    border: 1px solid rgba(var(--product-rgb), .48);
-    border-radius: 8px;
-    background: rgba(var(--product-rgb), .12);
+    padding: 10px 12px;
+    border: 1px solid rgba(var(--product-rgb), .2);
+    border-radius: 6px;
+    background: rgba(var(--product-rgb), .055);
     color: var(--product-ink);
     font-size: .82rem;
     font-weight: 650;
@@ -912,40 +912,25 @@ p {
 
 .help {
     display: grid;
+    grid-template-columns: 1fr;
+    gap: 36px;
+}
+
+.help > div:first-child {
+    display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 100px
+    align-items: end;
+    gap: 16px 56px;
 }
 
-.section-intro {
-    margin-top: 26px;
-    max-width: 390px
-}
-
-.benefits article {
-    display: flex;
-    gap: 24px;
-    padding-block: 24px;
-    border-bottom: 1px solid var(--line)
-}
-
-.benefits article:first-child {
-    padding-top: 0
-}
-
-.benefits article>span {
-    font-size: .75rem;
-    color: var(--green);
-    padding-top: 2px
-}
-
-.benefits h3 {
-    font-size: 1.08rem;
-    margin-bottom: 10px
-}
-
-.benefits p {
-    font-size: .95rem
-}
+.help .eyebrow { grid-column: 1 / -1; margin-bottom: 0; }
+.help h2 { font-size: clamp(1.7rem, 2.5vw, 2.2rem); }
+.section-intro { max-width: 480px; margin: 0; font-size: .95rem; }
+.benefits { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 28px; }
+.benefits article { display: flex; flex-direction: column; gap: 12px; padding-left: 18px; border-left: 1px solid #2b3b30; }
+.benefits article > span { font-size: .75rem; color: var(--green); }
+.benefits h3 { font-size: 1rem; line-height: 1.35; margin-bottom: 8px; }
+.benefits p { font-size: .875rem; line-height: 1.6; }
 
 /* Demonstrações: moldura e mídia com identidade local por produto. */
 .demo-grid {
@@ -958,11 +943,11 @@ p {
     --demo-rgb: 0, 210, 106;
     --demo-ink: #00e676;
     min-width: 0;
-    padding: clamp(14px, 2vw, 22px);
-    border: 1px solid rgba(var(--demo-rgb), .24);
-    border-radius: 16px;
-    background: linear-gradient(155deg, rgba(var(--demo-rgb), .045), transparent 60%), #111416;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .04), 0 12px 28px rgba(0, 0, 0, .16);
+    padding: 0 0 4px;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
     scroll-margin-top: 110px;
     transition: border-color .18s, box-shadow .18s;
 }
@@ -973,8 +958,8 @@ p {
 
 .demos .demo-card:hover,
 .demos .demo-card:focus-within {
-    border-color: rgba(var(--demo-rgb), .48);
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .055), 0 14px 30px rgba(0, 0, 0, .22);
+    border-color: transparent;
+    box-shadow: none;
 }
 
 .demos .demo-card:focus-visible {
@@ -991,14 +976,22 @@ p {
     aspect-ratio: 16 / 9;
     min-height: 190px;
     padding: 24px 16px;
-    border: 1px solid rgba(var(--demo-rgb), .2);
-    border-radius: 10px;
+    border: 1px solid rgba(var(--demo-rgb), .23);
+    border-radius: 12px;
     background:
         radial-gradient(ellipse at 50% 30%, rgba(var(--demo-rgb), .1), transparent 72%),
         repeating-linear-gradient(135deg, transparent, transparent 23px, rgba(255, 255, 255, .018) 23px, rgba(255, 255, 255, .018) 24px),
         #0c1013;
-    box-shadow: inset 0 1px 12px rgba(0, 0, 0, .2);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.04);
     text-align: center;
+    background: radial-gradient(ellipse at 50% 35%, rgba(var(--demo-rgb), .14), transparent 70%), linear-gradient(150deg, #141b18, #0c1010);
+    transition: border-color .18s, box-shadow .18s;
+}
+
+.demos .demo-card:hover .media-placeholder,
+.demos .demo-card:focus-within .media-placeholder {
+    border-color: rgba(var(--demo-rgb), .45);
+    box-shadow: inset 0 0 36px rgba(var(--demo-rgb), .035);
 }
 
 .demos .media-placeholder > span {
@@ -1008,11 +1001,11 @@ p {
     height: 56px;
     flex-shrink: 0;
     margin-bottom: 4px;
-    border: 1px solid rgba(var(--demo-rgb), .32);
-    border-radius: 13px;
-    background: linear-gradient(145deg, rgba(var(--demo-rgb), .16), rgba(var(--demo-rgb), .04));
+    border: 0;
+    border-radius: 0;
+    background: transparent;
     color: var(--demo-ink);
-    font-size: 2rem;
+    font-size: 2.4rem;
     line-height: 1;
 }
 
@@ -1032,7 +1025,7 @@ p {
 }
 
 .demos .demo-card h3 {
-    margin-top: 22px;
+    margin-top: 18px;
     color: #f2f4f3;
     font-size: clamp(1rem, 1.6vw, 1.15rem);
     font-weight: 650;
@@ -1064,7 +1057,7 @@ p {
 .about {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 90px;
+    gap: 72px;
     align-items: center;
 }
 
@@ -1095,15 +1088,15 @@ p {
 .about-visual {
     position: relative;
     min-width: 0;
-    min-height: 390px;
-    padding: 32px;
+    min-height: 360px;
+    padding: 28px 32px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border: 1px solid rgba(0, 210, 106, .22);
-    border-radius: 16px;
-    background: radial-gradient(circle at 50% 20%, rgba(0, 210, 106, .08), transparent 42%), #0f1511;
-    overflow: hidden;
+    border: 0;
+    border-radius: 0;
+    background: radial-gradient(ellipse at 50% 28%, rgba(0,210,106,.075), transparent 68%);
+    overflow: visible;
 }
 
 .about-mark {
@@ -1111,7 +1104,7 @@ p {
     flex-direction: column;
     align-items: center;
     gap: 14px;
-    margin-bottom: 22px;
+    margin-bottom: 28px;
 }
 
 /* Reutiliza a geometria e os gradientes da marca do header, sem alterá-los. */
@@ -1136,8 +1129,8 @@ p {
 }
 
 .about-message {
-    padding-top: 22px;
-    border-top: 1px solid rgba(255, 255, 255, .08);
+    padding-top: 26px;
+    border-top: 1px solid rgba(0,210,106,.12);
 }
 
 .about-message p {
@@ -1156,7 +1149,7 @@ p {
     grid-template-columns: repeat(4, minmax(0, 1fr));
     align-items: start;
     gap: 12px;
-    margin-top: 26px;
+    margin-top: 30px;
 }
 
 .about-values > div {
@@ -1289,9 +1282,8 @@ p {
         grid-template-columns: repeat(2, 1fr)
     }
 
-    .help {
-        gap: 50px
-    }
+    .help { gap: 32px; }
+    .benefits { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 
     .contact {
         gap: 28px;
@@ -1300,6 +1292,8 @@ p {
 }
 
 @media(max-width:760px) {
+    .help > div:first-child { grid-template-columns: 1fr; gap: 18px; }
+    .benefits { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
     .solutions .product-card { padding: 22px 18px 16px; }
     .solutions .product-icon { margin-bottom: 25px; }
     .solutions .status-badge { top: 22px; right: 12px; }
@@ -1309,7 +1303,7 @@ p {
     }
 
     .section {
-        padding-block: 64px
+        padding-block: 56px
     }
 
     .header-inner {
@@ -1443,6 +1437,9 @@ p {
 }
 
 @media(max-width:480px) {
+    .benefits { grid-template-columns: 1fr; gap: 22px; }
+    .benefits article { flex-direction: row; gap: 16px; padding-left: 0; border-left: 0; }
+    .benefits article > span { padding-top: 3px; }
     .solutions .product-card { padding: 26px; }
     .solutions .product-icon { margin-bottom: 24px; }
     .solutions .status-badge { top: 26px; right: 26px; }
