@@ -1278,16 +1278,125 @@ p {
 .about {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 80px
+    gap: 90px;
+    align-items: center;
 }
 
-.about-copy p+p {
-    margin-top: 20px
+.about-intro {
+    max-width: 520px;
+    min-width: 0;
+}
+
+.about-copy {
+    margin-top: 28px;
+}
+
+.about-copy p {
+    line-height: 1.7;
+}
+
+.about-copy p + p {
+    margin-top: 18px;
 }
 
 .about-copy p:first-child {
+    color: var(--text);
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.about-visual {
+    position: relative;
+    min-width: 0;
+    min-height: 390px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid rgba(0, 210, 106, .22);
+    border-radius: 16px;
+    background: radial-gradient(circle at 50% 20%, rgba(0, 210, 106, .08), transparent 42%), #0f1511;
+    overflow: hidden;
+}
+
+.about-mark {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 22px;
+}
+
+/* Reutiliza a geometria e os gradientes da marca do header, sem alterá-los. */
+.about-mark-logo {
+    display: grid;
+    place-items: center;
+    width: 96px;
+    height: 64px;
+}
+
+.about-mark-logo .brand-symbol-lk {
+    transform: scale(2);
+    transform-origin: center;
+}
+
+.about-mark small {
+    color: #c9d2cd;
+    font-size: .7rem;
+    line-height: 1.4;
+    letter-spacing: .22em;
+    text-align: center;
+}
+
+.about-message {
+    padding-top: 22px;
+    border-top: 1px solid rgba(255, 255, 255, .08);
+}
+
+.about-message p {
+    color: #f2f4f3;
+    font-size: 1.35rem;
+    line-height: 1.4;
+}
+
+.about-message strong {
+    color: var(--green);
+    font-weight: 650;
+}
+
+.about-values {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    align-items: start;
+    gap: 12px;
+    margin-top: 26px;
+}
+
+.about-values > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
+    text-align: center;
+}
+
+.about-values span {
+    display: grid;
+    place-items: center;
+    width: 28px;
+    height: 28px;
+    color: var(--green);
     font-size: 1.25rem;
-    color: var(--text)
+    line-height: 1;
+}
+
+.about-values p {
+    color: #bbc6bf;
+    font-size: .75rem;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
 }
 
 .contact {
@@ -1552,7 +1661,15 @@ p {
     }
 
 
+    .about-visual {
+        min-height: auto;
+        padding: 28px 22px;
+    }
 
+    .about-values {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 22px 14px;
+    }
 
 
     .help,
