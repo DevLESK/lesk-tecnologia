@@ -21,6 +21,11 @@ html {
     scroll-padding-top: 110px
 }
 
+/* O fundo decorativo do Hero não deve ampliar a largura da página. */
+main {
+    overflow-x: clip;
+}
+
 body {
     margin: 0;
     background: var(--bg);
@@ -209,7 +214,8 @@ p {
    L
    ========================= */
 
-.brand-l {
+.brand-l,
+.brand-k {
     position: relative;
     display: inline-block;
     width: 22px;
@@ -217,14 +223,9 @@ p {
 }
 
 /* haste vertical do L */
-.l-stem {
-    position: absolute;
-    left: 0;
-    top: 0;
-
-    width: 6px;
-    height: 32px;
-
+.l-stem,
+.l-base,
+.k-stem {
     background: linear-gradient(
         135deg,
         #004a2c 0%,
@@ -234,6 +235,16 @@ p {
         #00a85a 78%,
         #005c35 100%
     );
+}
+
+.l-stem {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    width: 6px;
+    height: 32px;
+
 }
 
 /* base horizontal do L */
@@ -245,28 +256,13 @@ p {
     width: 22px;
     height: 6px;
 
-    background: linear-gradient(
-        135deg,
-        #004a2c 0%,
-        #008b4d 22%,
-        #79e6a5 45%,
-        #00d26a 58%,
-        #00a85a 78%,
-        #005c35 100%
-    );
     }
-
 
 /* =========================
    K
    ========================= */
 
-.brand-k {
-    position: relative;
-    display: inline-block;
-    width: 22px;
-    height: 32px;
-}
+
 
 /* haste vertical do K */
 .k-stem {
@@ -277,15 +273,6 @@ p {
     width: 6px;
     height: 32px;
 
-    background: linear-gradient(
-        135deg,
-        #004a2c 0%,
-        #008b4d 22%,
-        #79e6a5 45%,
-        #00d26a 58%,
-        #00a85a 78%,
-        #005c35 100%
-    );
 }
 
 /* braços prata do K */
@@ -771,142 +758,6 @@ p {
     color:var(--purple);
 }
 
-.ecosystem {
-    height: 480px;
-    position: relative;
-    display: grid;
-    place-items: center;
-    background: radial-gradient(ellipse at center, #00d26a12, transparent 64%)
-}
-
-.orbit {
-    position: absolute;
-    border: 1px solid #263d30;
-    border-radius: 50%;
-    width: 330px;
-    height: 330px;
-    transform: rotate(-30deg)
-}
-
-.orbit:before,
-.orbit:after {
-    content: "";
-    position: absolute;
-    width: 7px;
-    height: 7px;
-    background: var(--green);
-    border-radius: 50%;
-    left: 45px;
-    top: 44px;
-    box-shadow: 0 0 15px #00d26a55
-}
-
-.orbit:after {
-    left: auto;
-    top: auto;
-    right: 45px;
-    bottom: 44px;
-    background: var(--purple)
-}
-
-.orbit-two {
-    width: 440px;
-    height: 440px;
-    border-color: #1b2721;
-    transform: rotate(30deg)
-}
-
-.orbit-two:before {
-    background: var(--blue);
-    left: 63px;
-    top: 62px
-}
-
-.orbit-two:after {
-    display: none
-}
-
-.core-mark {
-    width: 174px;
-    height: 174px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(135deg, #1a3527, #0b100e);
-    border: 1px solid #356447;
-    border-radius: 36px;
-    box-shadow: 0 0 70px #00d26a0c;
-    transform: rotate(-9deg)
-}
-
-.core-mark span {
-    font-size: 2.8rem;
-    font-weight: 750;
-    letter-spacing: -.04em
-}
-
-.core-mark small {
-    font-size: .63rem;
-    letter-spacing: .2em;
-    color: var(--green)
-}
-
-.orbit-label {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    border: 1px solid #2c3c32;
-    border-radius: 10px;
-    background: #101713;
-    padding: 13px 18px;
-    font-size: .875rem;
-    box-shadow: 0 8px 25px #0005
-}
-
-.orbit-label i {
-    font-style: normal;
-    color: var(--green);
-    font-size: 1.3rem
-}
-
-.label-agenda {
-    top: 53px;
-    left: 35px
-}
-
-.label-vitrine {
-    top: 128px;
-    right: 0
-}
-
-.label-vitrine i {
-    color: var(--purple)
-}
-
-.label-financeiro {
-    bottom: 85px;
-    left: 0
-}
-
-.label-financeiro i {
-    color: var(--blue)
-}
-
-.label-comercio {
-    bottom: 41px;
-    right: 23px
-}
-
-.ecosystem-caption {
-    position: absolute;
-    bottom: -15px;
-    text-align: center;
-    font-size: .75rem;
-    letter-spacing: .04em
-}
-
 .solutions,
 .demos {
     border-block: 1px solid #1e2822;
@@ -931,72 +782,6 @@ p {
     grid-template-columns: repeat(4, 1fr);
     gap: 18px
 }
-
-
-
-
-
-/* Identidade visual dos produtos */
-
-
-
-
-
-
-
-
-
-
-/* Ícones */
-
-
-
-
-
-
-
-
-
-
-/* Hover */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Nossas Soluções: cores locais e regras compartilhadas dos quatro produtos. */
 .solutions .product-card {
@@ -1197,6 +982,7 @@ p {
 }
 
 .demos .media-placeholder {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1474,6 +1260,22 @@ p {
     font-size: .75rem
 }
 
+/* Evita cortar o painel decorativo dentro da tela do notebook. */
+@media(max-width:1050px) {
+    .laptop { container-type: inline-size; }
+    .laptop-screen { display: grid; grid-template-rows: min(30px, 5.56cqw) minmax(0, 1fr); }
+    .laptop-browser { height: auto; }
+    .laptop-content { height: 100%; min-height: 0; display: flex; flex-direction: column; padding: min(18px, 3.33cqw); }
+    .laptop-brand { flex-shrink: 0; margin-bottom: min(16px, 2.96cqw); }
+    .laptop-brand strong { font-size: min(1.45rem, 4.3cqw); }
+    .laptop-brand small { font-size: min(.52rem, 1.54cqw); }
+    .laptop-dashboard { height: auto; flex: 1; min-height: 0; grid-template-columns: min(76px, 14.07cqw) 1fr; gap: min(14px, 2.6cqw); }
+    .dashboard-main { min-height: 0; gap: min(12px, 2.22cqw); }
+    .dashboard-heading { flex-shrink: 0; }
+    .dashboard-cards span { height: min(62px, 11.48cqw); }
+    .dashboard-panel { min-height: 0; }
+}
+
 @media(min-width:761px) and (max-width:1050px) {
     #navigation {
         gap: 18px
@@ -1481,16 +1283,6 @@ p {
 
     .hero {
         grid-template-columns: 1.1fr .9fr
-    }
-
-    .ecosystem {
-        transform: scale(.8);
-        transform-origin: center
-    }
-
-    .orbit-two {
-        width: 360px;
-        height: 360px
     }
 
     .product-grid {
@@ -1528,10 +1320,6 @@ p {
 
     .brand {
         font-size: 1.4rem
-    }
-
-    .brand-symbol {
-        font-size: 2rem
     }
 
     .js .menu-toggle {
@@ -1590,62 +1378,6 @@ p {
         font-size: .75rem
     }
 
-    .ecosystem {
-        height: 370px;
-        width: min(100%, 410px);
-        margin-inline: auto
-    }
-
-    .orbit {
-        width: 240px;
-        height: 240px
-    }
-
-    .orbit-two {
-        width: 300px;
-        height: 300px
-    }
-
-    .core-mark {
-        width: 136px;
-        height: 136px;
-        border-radius: 28px
-    }
-
-    .core-mark span {
-        font-size: 2.2rem
-    }
-
-    .orbit-label {
-        padding: 9px 12px;
-        font-size: .8rem;
-        gap: 8px
-    }
-
-    .label-agenda {
-        top: 35px;
-        left: 7px
-    }
-
-    .label-vitrine {
-        top: 104px;
-        right: 0
-    }
-
-    .label-financeiro {
-        bottom: 75px;
-        left: 0
-    }
-
-    .label-comercio {
-        bottom: 32px;
-        right: 5px
-    }
-
-    .ecosystem-caption {
-        bottom: 0
-    }
-
     .section-heading {
         display: block;
         margin-bottom: 30px
@@ -1660,7 +1392,6 @@ p {
         gap: 14px
     }
 
-
     .about-visual {
         min-height: auto;
         padding: 28px 22px;
@@ -1670,7 +1401,6 @@ p {
         grid-template-columns: repeat(2, 1fr);
         gap: 22px 14px;
     }
-
 
     .help,
     .about {
@@ -1717,15 +1447,10 @@ p {
     .solutions .product-icon { margin-bottom: 24px; }
     .solutions .status-badge { top: 26px; right: 26px; }
 
-
     .product-grid,
     .demo-grid {
         grid-template-columns: 1fr
     }
-
-
-
-
 
     .hero .actions {
         align-items: stretch;
@@ -1743,15 +1468,6 @@ p {
     .contact-actions .text-link {
         justify-content: center
     }
-
-    .ecosystem {
-        height: 350px
-    }
-
-    .orbit-two {
-        width: 270px;
-        height: 270px
-    }
 }
 
 @media(prefers-reduced-motion:reduce) {
@@ -1766,68 +1482,6 @@ p {
         animation: none !important
     }
 }
-
-/* Contém os círculos decorativos em telas estreitas. */
-.ecosystem {
-    overflow: clip
-}
-
-.ecosystem-caption {
-    bottom: 0
-}
-
-
-
-
-
-
-
-/* Refinamento visual dos cards — sem alterar layout */
-
-
-
-/* Studio Agenda */
-
-
-/* LESK Vitrine */
-
-
-/* LESK Financeiro */
-
-
-/* LESK Comércio */
-
-
-/* Lista de recursos dos cards */
-
-
-
-
-
-
-
-
-
-
-
-
-/* Mais presença nas cores dos produtos */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .button.button-instagram {
     border-color: #d946ef;
