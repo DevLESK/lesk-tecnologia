@@ -9,11 +9,11 @@
  */
 window.LESK_CONFIG = Object.freeze({
   /* WhatsApp: código do país + DDD + número, somente dígitos. */
-  whatsappNumber: "",
+  whatsappNumber: "5521991448401",
 
   /* Mensagem inicial do WhatsApp ao abrir a conversa. */
   whatsappMessage: "Olá! Quero conhecer as soluções da LESK Tecnologia.",
 
   /* Instagram: URL completa do perfil oficial, com https://www.instagram.com/. */
-  instagramUrl: ""
+  instagramUrl: "https://www.instagram.com/lesk_tecnologia/"
 });
