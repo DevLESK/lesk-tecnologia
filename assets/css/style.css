@@ -913,6 +913,67 @@ p {
     line-height: 1.65;
 }
 
+
+/* Studio Agenda: Reel real incorporado na demonstração, com moldura vertical responsiva. */
+.demos .demo-reel-shell {
+    width: 100%;
+    min-height: 430px;
+    display: grid;
+    place-items: center;
+    padding: 22px;
+    border: 1px solid rgba(var(--demo-rgb), .23);
+    border-radius: 12px;
+    background:
+        radial-gradient(ellipse at 50% 42%, rgba(var(--demo-rgb), .14), transparent 62%),
+        linear-gradient(150deg, #141b18, #0c1010);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.04);
+}
+
+.demos .demo-reel-frame {
+    width: min(286px, 100%);
+    aspect-ratio: 9 / 16;
+    overflow: hidden;
+    border: 1px solid rgba(var(--demo-rgb), .34);
+    border-radius: 18px;
+    background: #050706;
+    box-shadow: 0 22px 45px rgba(0,0,0,.4), 0 0 34px rgba(var(--demo-rgb), .08);
+}
+
+.demos .demo-reel-frame iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    background: #000;
+}
+
+.demos .demo-external-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 14px;
+    color: var(--demo-ink);
+    font-size: .82rem;
+    font-weight: 650;
+    line-height: 1.4;
+}
+
+.demos .demo-external-link:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+@media(max-width:480px) {
+    .demos .demo-reel-shell {
+        min-height: 0;
+        padding: 16px;
+    }
+
+    .demos .demo-reel-frame {
+        width: min(300px, 100%);
+    }
+}
+
 /* A mídia real ocupa a mesma moldura, sem corte da imagem. */
 .demos .demo-card img,
 .demos .demo-card video {
