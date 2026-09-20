@@ -920,6 +920,24 @@ p {
     border-radius: 12px;
     text-decoration: none;
 }
+.demos .demo-media-slot {
+    display: block;
+    border-radius: 12px;
+}
+
+.demos .demo-media-slot .demo-cover {
+    cursor: default;
+}
+
+.demos .demo-cover-play.is-pending {
+    opacity: .48;
+    filter: saturate(.65);
+}
+
+.demos .demo-media-slot .demo-cover-action {
+    color: #9eaaa3;
+}
+
 
 .demos .demo-cover {
     position: relative;
@@ -1190,6 +1208,99 @@ p {
     font-size: .75rem;
     line-height: 1.5;
     overflow-wrap: anywhere;
+}
+
+.credentials {
+    border-top: 1px solid #1b241f;
+    background:
+        radial-gradient(ellipse at 18% 20%, rgba(0,210,106,.05), transparent 42%),
+        #0b0f0d;
+}
+
+.credentials-heading h2 {
+    max-width: 660px;
+}
+
+.credentials-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.credential-card {
+    min-width: 0;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 18px;
+    align-items: start;
+    padding: 24px;
+    border: 1px solid #26362d;
+    border-radius: 12px;
+    background:
+        radial-gradient(circle at 0% 0%, rgba(0,210,106,.08), transparent 45%),
+        #101512;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.03);
+}
+
+.credential-icon {
+    display: grid;
+    place-items: center;
+    width: 46px;
+    height: 46px;
+    border: 1px solid rgba(0,210,106,.24);
+    border-radius: 10px;
+    background: rgba(0,210,106,.06);
+    font-size: 1.25rem;
+    line-height: 1;
+}
+
+.credential-card small {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--green);
+    font-size: .66rem;
+    font-weight: 700;
+    letter-spacing: .1em;
+}
+
+.credential-card h3 {
+    color: #f2f4f3;
+    font-size: 1.05rem;
+    line-height: 1.35;
+}
+
+.credential-card p {
+    margin-top: 10px;
+    font-size: .86rem;
+    line-height: 1.6;
+}
+
+.credentials-note {
+    margin-top: 18px;
+    color: #87938c;
+    font-size: .78rem;
+}
+
+@media(max-width:760px) {
+    .credentials-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .credential-card {
+        padding: 20px;
+    }
+}
+
+@media(max-width:480px) {
+    .credential-card {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .credential-icon {
+        width: 42px;
+        height: 42px;
+    }
 }
 
 .contact {
