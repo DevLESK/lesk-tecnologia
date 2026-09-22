@@ -135,3 +135,30 @@ p{color:var(--muted)}
   .service-grid,.portfolio-grid-five,.steps-five{grid-template-columns:1fr}
   .site-footer{align-items:flex-start;flex-direction:column}
 }
+
+/* Teste visual — foto da Yasmin no hero */
+.hero-visual-photo {
+  min-height: 500px;
+  place-items: center;
+}
+
+.hero-profile-image {
+  display: block;
+  width: min(430px, 100%);
+  height: auto;
+  border: 1px solid rgba(22,216,229,.28);
+  border-radius: 24px;
+  background: #0f1517;
+  box-shadow:
+    0 30px 70px rgba(0,0,0,.38),
+    0 0 40px rgba(22,216,229,.08);
+}
+
+@media(max-width:950px){
+  .hero-visual-photo{min-height:0}
+  .hero-profile-image{width:min(390px,92%)}
+}
+
+@media(max-width:760px){
+  .hero-profile-image{width:min(340px,94%);border-radius:18px}
+}
