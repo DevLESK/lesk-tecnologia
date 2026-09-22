@@ -1623,3 +1623,26 @@ p {
     );
     color: #ffffff;
 }
+
+/* Teste visual — retrato no bloco Sobre */
+.about-visual.about-visual-photo {
+    min-height: 0;
+    width: min(100%, 520px);
+    justify-self: center;
+    padding: 0;
+    border: 1px solid #26362d;
+    border-radius: 18px;
+    background: #101412;
+    overflow: hidden;
+    box-shadow:
+        0 24px 60px rgba(0, 0, 0, .35),
+        0 0 34px rgba(0, 210, 106, .05);
+}
+
+.about-profile-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 360 / 459;
+    object-fit: cover;
+}
