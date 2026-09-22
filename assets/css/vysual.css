@@ -46,7 +46,7 @@ img{max-width:100%}
 .section{padding-block:74px}
 
 .hero{border-bottom:1px solid rgba(255,255,255,.06);background:linear-gradient(180deg,#061014 0%,#050809 82%)}
-.hero-grid{min-height:620px;display:grid;grid-template-columns:.9fr 1.1fr;align-items:center;gap:40px;padding-block:56px}
+.hero-grid{min-height:620px;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:44px;padding-block:56px}
 .hero-copy{position:relative;z-index:4}
 .hero h1{max-width:650px;font-size:clamp(3.2rem,5.5vw,5.7rem);line-height:.93;letter-spacing:-.055em}
 .hero h1 span{color:var(--cyan)}
@@ -214,9 +214,9 @@ img{max-width:100%}
 }
 .brand-panel{
   position:absolute;
-  left:40%;
-  top:15%;
-  width:31%;
+  left:39%;
+  top:12%;
+  width:35%;
   min-height:260px;
   display:flex;
   flex-direction:column;
@@ -531,5 +531,57 @@ img{max-width:100%}
   }
   .footer-main{
     padding-block:28px;
+  }
+}
+
+
+/* Hero: identidade da vYsual primeiro no mobile. */
+@media(max-width:560px){
+  .hero-stage-brand{
+    min-height:auto;
+    order:1;
+  }
+
+  .hero-copy{
+    order:2;
+  }
+
+  .hero-stage-brand .hero-glow,
+  .hero-stage-brand .phone-card-main,
+  .hero-stage-brand .floating-grid{
+    display:none;
+  }
+
+  .hero-stage-brand .brand-panel{
+    position:relative;
+    left:auto;
+    top:auto;
+    width:100%;
+    min-height:168px;
+    padding:20px;
+    border-radius:14px;
+    background:
+      radial-gradient(circle at 78% 18%,rgba(16,219,233,.16),transparent 32%),
+      linear-gradient(145deg,#0d171a,#070c0e);
+  }
+
+  .hero-stage-brand .brand-panel-kicker{
+    font-size:.54rem;
+  }
+
+  .hero-stage-brand .brand-panel strong{
+    margin-top:12px;
+    font-size:2rem;
+    line-height:1;
+  }
+
+  .hero-stage-brand .brand-panel small{
+    margin-top:14px;
+    font-size:.47rem;
+  }
+
+  .hero-grid{
+    gap:20px;
+    padding-top:22px;
   }
 }
