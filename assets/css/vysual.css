@@ -585,3 +585,52 @@ img{max-width:100%}
     padding-top:22px;
   }
 }
+
+
+/* Correção: no mobile, o card com a marca vYsual é o destaque do topo. */
+@media(max-width:560px){
+  .hero-stage-brand{
+    display:block;
+    min-height:auto;
+    order:1;
+  }
+
+  .hero-stage-brand .hero-glow,
+  .hero-stage-brand .brand-panel,
+  .hero-stage-brand .floating-grid{
+    display:none;
+  }
+
+  .hero-stage-brand .phone-card-main{
+    display:block;
+    position:relative;
+    left:auto;
+    top:auto;
+    width:min(250px,72vw);
+    height:330px;
+    margin:0 auto;
+    padding:8px;
+    transform:none;
+    border-radius:28px;
+  }
+
+  .hero-stage-brand .phone-screen{
+    padding:24px 14px;
+  }
+
+  .hero-stage-brand .mini-brand{
+    font-size:1.35rem;
+  }
+
+  .hero-stage-brand .phone-screen p{
+    font-size:.86rem;
+  }
+
+  .hero-stage-brand .phone-screen small{
+    font-size:.7rem;
+  }
+
+  .hero-copy{
+    order:2;
+  }
+}
