@@ -15,6 +15,7 @@ section{padding:60px 0}.section-head{display:flex;justify-content:space-between;
 .services{background:#0a0e14;border-bottom:1px solid rgba(255,255,255,.05)}.service-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.service-card{padding:23px;border:1px solid #243147;border-radius:16px;background:linear-gradient(145deg,#111925,#0c1119)}.service-card span{color:#ff5360;font-size:.68rem;font-weight:900;letter-spacing:.16em}.service-card h3{margin-top:16px;font-size:1.3rem}.service-card p{margin-top:8px;color:var(--muted)}
 .work-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.reel-card{min-height:270px;border:1px solid #27364b;border-radius:18px;padding:23px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden;background:radial-gradient(circle at 80% 15%,rgba(226,29,42,.17),transparent 30%),linear-gradient(145deg,#111a27,#090d14);transition:.18s}.reel-card:nth-child(2){background:radial-gradient(circle at 80% 15%,rgba(10,47,130,.38),transparent 32%),linear-gradient(145deg,#111a27,#090d14)}.reel-card:hover{transform:translateY(-2px);border-color:#52617a}.play{width:64px;height:64px;border-radius:50%;display:grid;place-items:center;background:#fff;color:#0a0d12;font-size:1.4rem;box-shadow:0 15px 30px rgba(0,0,0,.25)}.reel-copy small{color:#ff5964;font-weight:900;letter-spacing:.15em}.reel-copy h3{margin-top:8px;font-size:1.45rem}.reel-copy p{margin-top:5px;color:var(--muted);font-size:.86rem}
 .about{background:#0a0e14}.about-grid{display:grid;grid-template-columns:.88fr 1.12fr;gap:34px;align-items:center}.about-mark{min-height:270px;border:1px solid #27364b;border-radius:20px;display:grid;place-items:center;background:linear-gradient(135deg,#0b2a70 0 42%,#d91320 42% 73%,#050505 73%)}.about-mark .brand strong{font-size:4.4rem}.about-mark .brand em{font-size:2.2rem;color:#fff}.about h2{font-size:clamp(2rem,4vw,3.1rem);line-height:1.05}.about p{margin-top:15px;color:var(--muted)}
+.contact-card{max-width:820px;padding:34px;border:1px solid #27364b;border-radius:20px;background:linear-gradient(145deg,#111925,#0c1119)}
 .contact-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:22px}
 .contact-btn{display:flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:12px 16px;border-radius:12px;font-weight:800;transition:transform .18s,border-color .18s,background .18s}
 .contact-btn:hover{transform:translateY(-1px)}
@@ -31,7 +32,7 @@ footer{padding:27px 0}.foot{display:flex;justify-content:space-between;gap:20px;
 .hero-logo-real{position:relative;z-index:2;width:min(560px,94%);height:auto;display:block;object-fit:contain;border-radius:16px;box-shadow:0 18px 42px rgba(0,0,0,.35)}
 .about-mark{background:transparent;padding:0;border-color:#27364b}
 .about-logo-real{display:block;max-width:340px;width:min(100%,340px);height:auto;object-fit:contain}
-@media(max-width:560px){.brand-logo img{width:60px;height:60px}.about-logo-real{max-width:250px}.contact-actions{grid-template-columns:1fr}.contact-btn{width:100%;min-height:50px}}
+@media(max-width:560px){.brand-logo img{width:60px;height:60px}.about-logo-real{max-width:250px}.contact-card{padding:24px}.contact-actions{grid-template-columns:1fr}.contact-btn{width:100%;min-height:50px}}
 </style>
 <!-- piloto CFG: branch dedicada -->
 </head>
@@ -51,7 +52,7 @@ footer{padding:27px 0}.foot{display:flex;justify-content:space-between;gap:20px;
 <a class="reel-card" href="https://www.instagram.com/reel/Da1HzXWgZ-_/" target="_blank" rel="noopener"><div class="play">▶</div><div class="reel-copy"><small>VÍDEO 01</small><h3>Antes e depois CFG</h3><p>Toque para assistir o trabalho completo no Instagram.</p></div></a>
 <a class="reel-card" href="https://www.instagram.com/reel/DZqOjKbAduI/" target="_blank" rel="noopener"><div class="play">▶</div><div class="reel-copy"><small>VÍDEO 02</small><h3>Trabalho CFG</h3><p>Toque para abrir o Reel original e ver o resultado.</p></div></a>
 </div></div></section>
-<section id="sobre" class="about"><div class="container about-grid"><div class="about-mark"><img class="about-logo-real" src="assets/images/emblema-cfg-pintura-polimento.webp" alt="Logo oficial CFG Pintura e Polimento"></div><div><p class="eyebrow">FALE COM A CFG</p><h2>Pronto para cuidar do seu carro?</h2><p>Fale com a CFG, tire suas dúvidas e solicite seu orçamento.</p><div class="contact-actions">
+<section id="sobre" class="about"><div class="container contact-card"><div><p class="eyebrow">FALE COM A CFG</p><h2>Pronto para cuidar do seu carro?</h2><p>Fale com a CFG, tire suas dúvidas e solicite seu orçamento.</p><div class="contact-actions">
 <a class="contact-btn contact-btn-whatsapp" href="https://wa.me/5521989350870?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20CFG%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento." target="_blank" rel="noopener">WhatsApp</a>
 <a class="contact-btn contact-btn-instagram" href="https://www.instagram.com/cfgpolimentos" target="_blank" rel="noopener">Instagram</a>
 </div></div></div></section>
