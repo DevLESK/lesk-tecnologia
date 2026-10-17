@@ -1796,3 +1796,98 @@ p {
   .lesk-v3-left.lesk-v3-bottom {grid-column:1;grid-row:3;}
   .lesk-v3-right.lesk-v3-bottom {grid-column:2;grid-row:3;}
 }
+
+
+/* V5 — topo fiel à imagem aprovada, conteúdo visual original com botões HTML reais. */
+#inicio.lesk-v5 {
+  position: relative; isolation: isolate; max-width: 1324px; margin: 0 auto;
+  width: 100%; min-height: 0; padding: 0; background: #060b09;
+}
+.lesk-v5-original-poster { display: block; width: 100%; height: auto; }
+.lesk-v5-desktop { position: relative; }
+.lesk-v5-ctas-cover {
+  position: absolute; bottom: 0; left: 0; width: 43%; height: 53px;
+  pointer-events: none;
+  background: linear-gradient(90deg,#060b08 0%,#060b08 89%,transparent 100%);
+}
+.lesk-v5-live-ctas {
+  position: absolute; bottom: 2px; left: 4.8%;
+  display: flex; align-items: center; gap: 13px; z-index: 2;
+}
+.lesk-v5-live-ctas a {
+  box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center;
+  gap: 9px; min-height: 39px; padding: 0 17px; border: 1px solid #16e977;
+  border-radius: 50px; font-size: 13px; font-weight: 700; line-height: 1.1;
+  text-decoration: none; white-space: nowrap;
+}
+.lesk-v5-live-ctas a:first-child { color:#07140b; background:#14ef77; }
+.lesk-v5-live-ctas a:first-child:hover { background:#81ffb4; }
+.lesk-v5-live-ctas a:last-child { color:#fff; background:#070d09; }
+.lesk-v5-live-ctas a:last-child:hover { background:#183524; }
+.lesk-v5-live-ctas a:focus-visible,.lesk-v5-mobile-ctas a:focus-visible {
+  outline:3px solid #fff;outline-offset:3px;
+}
+.lesk-v5-visually-hidden {
+  position:absolute!important; width:1px!important;height:1px!important; padding:0!important;
+  margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;
+  white-space:nowrap!important;border:0!important;
+}
+.lesk-v5-mobile { display: none; }
+@media (max-width:920px) {
+  .lesk-v5-desktop { display:none; }
+  .lesk-v5-mobile { display: block; padding: 32px 20px 31px;
+    background: radial-gradient(ellipse at 50% 55%,rgba(0,208,94,.16),transparent 68%),#060b08; }
+  .lesk-v5-mobile h1 {
+    font-size: clamp(37px,9vw,50px);line-height:1.04;letter-spacing:-1.7px;
+    margin:12px 0 17px;font-weight:800;color:#f3f7f4;
+  }
+  .lesk-v5-mobile h1 span { color:#16e977; }
+  .lesk-v5-pill {
+    font-size:9px;padding:9px 12px;display:inline-block;color:#66f9a9;
+    border:1px solid #14673a;border-radius:28px;background:#042619;font-weight:800;
+  }
+  .lesk-v5-desc {font-size:14px;color:#d9e5de;line-height:1.45;margin:0 0 20px;}
+  .lesk-v5-mobile-ctas {display:flex;gap:8px;flex-wrap:wrap;}
+  .lesk-v5-mobile-ctas a {
+    display:inline-flex;align-items:center;gap:8px;min-height:44px;
+    padding:12px 14px;border:1px solid #00d96d;
+    border-radius:36px;font-size:12px;font-weight:750;text-decoration:none;
+  }
+  .lesk-v5-mobile-ctas a:first-child {background:#17e879;color:#04250c;}
+  .lesk-v5-mobile-ctas a:last-child {color:#f3f7f4;background:#070d09;}
+  .lesk-v5-center-art {
+    display:block;max-width:min(100%,440px);width:100%;height:auto;
+    margin:22px auto 0;
+    -webkit-mask-image:linear-gradient(to right,transparent,#000 12%,#000 88%,transparent);
+    mask-image:linear-gradient(to right,transparent,#000 12%,#000 88%,transparent);
+    filter:drop-shadow(0 11px 18px rgba(0,229,96,.15));
+  }
+  .lesk-v5-services {
+    display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:9px;margin-top:-16px;position:relative;
+  }
+  .lesk-v5-service {
+    background:linear-gradient(145deg,#0a2d1a,#06170e);
+    border:1px solid #18824a;border-radius:10px;padding:12px 10px;
+    min-height:67px;display:flex;align-items:center;gap:8px;
+    font-size:12px;font-weight:750;color:#f3f7f4;
+  }
+  .lesk-v5-service>span {font-size:22px;color:#16e977;}
+  .lesk-v5-service small {display:block;margin-top:4px;font-size:10px;color:#a9c3b0;font-weight:400;}
+}
+@media(max-width:380px) {
+  .lesk-v5-mobile {padding-inline:14px;}
+  .lesk-v5-mobile h1 {font-size:35px;}
+  .lesk-v5-service {padding:10px 7px;font-size:11px;}
+}
+
+/* Recorte responsivo da mesma arte original em AVIF, sem baixar um segundo arquivo. */
+@media(max-width:920px) {
+  .lesk-v5-center-art {
+    width:368px;max-width:100%;height:273px;
+    background-image:url("../images/lesk-v5-desktop.avif");
+    background-repeat:no-repeat;
+    background-size:1324px 273px;
+    background-position:-668px 0;
+  }
+}
