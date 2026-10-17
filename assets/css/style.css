@@ -1724,3 +1724,75 @@ p {
   .product-grid {grid-template-columns:1fr;}
   .hero .actions {align-items:stretch;}
 }
+
+
+/* Topo V3 LESK: ajuste isolado, inspirado no Conceito 1 aprovado. */
+#inicio.lesk-v3-hero {
+  width:min(1420px,calc(100% - 64px)); min-height:0; height:490px;
+  display:grid; grid-template-columns:minmax(0,.425fr) minmax(0,.575fr);
+  gap:12px; align-items:center; padding:14px 0 26px; overflow:visible;
+}
+#inicio.lesk-v3-hero::before {background:radial-gradient(ellipse at 78% 70%,rgba(0,126,63,.16),transparent 52%),linear-gradient(90deg,#070b09,#070e0a 44%,#08100c); }
+#inicio.lesk-v3-hero::after {opacity:.22;}
+.lesk-v3-copy {position:relative;z-index:2;max-width:575px;padding-bottom:8px;}
+.lesk-v3-pill {display:inline-flex;align-items:center;max-width:100%;border-radius:99px;border:1px solid #17623c;background:#092717;padding:8px 13px;margin-bottom:16px;color:#6df8a4;font-size:10px;font-weight:750;letter-spacing:.035em;line-height:1.4;}
+#inicio.lesk-v3-hero h1 {font-size:clamp(37px,3.2vw,53px);font-weight:760;letter-spacing:-.055em;line-height:1.065;max-width:590px;}
+#inicio.lesk-v3-hero h1 span {color:#19ed70;}
+.lesk-v3-description {max-width:540px;font-size:14px;line-height:1.55;color:#e0e9e3;margin:18px 0 20px;}
+.lesk-v3-actions {display:flex;flex-wrap:wrap;gap:11px;align-items:center;}
+.lesk-v3-button {min-height:44px;display:inline-flex;gap:11px;align-items:center;justify-content:center;border:1px solid #00d76a;border-radius:99px;padding:10px 17px;font-size:12.5px;font-weight:750;line-height:1.3;transition:background-color .18s,box-shadow .18s;white-space:nowrap;}
+.lesk-v3-primary {background:#17ee77;color:#04210d;box-shadow:0 10px 26px rgba(8,210,92,.12);}
+.lesk-v3-primary:hover {background:#70ffa9;}
+.lesk-v3-secondary {background:rgba(6,18,11,.85);color:#ebf8ef;}
+.lesk-v3-secondary:hover {background:#193824;}
+.lesk-v3-visual {position:relative;isolation:isolate;height:394px;min-width:0;display:flex;align-items:center;justify-content:center;}
+.lesk-v3-visual::before {content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse at 50% 67%,rgba(0,214,98,.29),transparent 63%);filter:blur(11px);pointer-events:none;}
+.lesk-v3-stage {position:relative;z-index:2;width:37%;height:343px;max-width:none;display:flex;justify-content:center;align-items:center;filter:drop-shadow(0 14px 19px rgba(0,0,0,.76));}
+.lesk-v3-stage img {width:100%;height:100%;display:block;object-fit:fill;filter:saturate(1.15) contrast(1.03);}
+.lesk-v3-pedestal {position:absolute;z-index:0;bottom:7px;left:21%;width:58%;height:32px;border:1px solid #155a34;border-radius:50%;background:linear-gradient(#1f5835,#0b1710);box-shadow:0 8px 37px rgba(0,211,99,.24),inset 0 2px 8px rgba(28,221,114,.14);transform:perspective(800px) rotateX(58deg);}
+.lesk-v3-service {position:absolute;z-index:3;display:flex;align-items:center;gap:11px;width:27%;max-width:230px;min-height:94px;padding:12px;border:1px solid rgba(6,175,84,.62);border-radius:12px;background:radial-gradient(circle at 90% 76%,rgba(8,46,25,.92),rgba(6,19,11,.96) 80%);box-shadow:0 0 18px rgba(0,153,77,.08),0 14px 25px rgba(0,0,0,.48);}
+.lesk-v3-service::after {content:"";position:absolute;top:50%;width:20px;height:1px;background:#14af5b;}
+.lesk-v3-left {left:1.4%;}.lesk-v3-left::after {right:-20px;}.lesk-v3-right {right:1.4%;}.lesk-v3-right::after {left:-20px;}
+.lesk-v3-top {top:51px;}.lesk-v3-bottom {bottom:50px;}
+.lesk-v3-service-icon {flex:0 0 39px;display:grid;place-items:center;width:39px;height:39px;border:1px solid #166f44;border-radius:9px;background:linear-gradient(140deg,#08432a,#0c2517);color:#20ee81;font-size:23px;line-height:1;}
+.lesk-v3-service strong {display:block;color:#f2fff5;font-size:13px;line-height:1.25;font-weight:720;}
+.lesk-v3-service small {display:block;color:#c8d5cc;font-size:10px;line-height:1.4;margin-top:5px;}
+@media(max-width:1180px){
+  #inicio.lesk-v3-hero {grid-template-columns:minmax(0,.43fr) minmax(0,.57fr);height:445px;gap:9px;}
+  #inicio.lesk-v3-hero h1 {font-size:clamp(35px,3.65vw,46px);}
+  .lesk-v3-visual {height:363px;}
+  .lesk-v3-stage {height:319px;}
+  .lesk-v3-service {width:28%;min-height:88px;padding:9px 7px;gap:7px;}
+  .lesk-v3-service strong {font-size:11px;}.lesk-v3-service small {font-size:9px;}
+  .lesk-v3-service-icon {width:32px;flex-basis:32px;height:32px;font-size:19px;}
+  .lesk-v3-top {top:45px;}.lesk-v3-bottom {bottom:46px;}
+}
+@media(max-width:760px){
+  #inicio.lesk-v3-hero {width:calc(100% - 40px);grid-template-columns:1fr;height:auto;gap:8px;padding:35px 0 28px;}
+  #inicio.lesk-v3-hero h1 {font-size:clamp(39px,7.3vw,54px);max-width:650px;}
+  .lesk-v3-copy {max-width:670px;}
+  .lesk-v3-visual {width:min(100%,680px);height:392px;margin:12px auto 0;}
+  .lesk-v3-stage {width:38%;height:334px;}
+  .lesk-v3-service {width:28%;}
+  .lesk-v3-top {top:47px;}.lesk-v3-bottom {bottom:46px;}
+}
+@media(max-width:560px){
+  #inicio.lesk-v3-hero {padding:29px 0 25px;}
+  .lesk-v3-pill {font-size:9px;padding:8px 10px;margin-bottom:18px;}
+  #inicio.lesk-v3-hero h1 {font-size:clamp(35px,9.7vw,48px);line-height:1.08;}
+  .lesk-v3-description {font-size:14px;margin:18px 0 19px;}
+  .lesk-v3-actions {gap:9px;}
+  .lesk-v3-button {font-size:11px;min-height:45px;padding:10px 13px;gap:7px;}
+  .lesk-v3-visual {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:225px auto auto;gap:10px;height:auto;margin:23px auto 0;}
+  .lesk-v3-visual::before {height:245px;}
+  .lesk-v3-pedestal {display:none;}
+  .lesk-v3-stage {grid-row:1;grid-column:1/-1;width:210px;height:225px;justify-self:center;}
+  .lesk-v3-service {position:relative;left:auto;right:auto;top:auto;bottom:auto;width:100%;max-width:none;min-height:68px;gap:7px;padding:9px 7px;}
+  .lesk-v3-service::after {display:none;}
+  .lesk-v3-service strong {font-size:11px;}.lesk-v3-service small {font-size:9px;}
+  .lesk-v3-service-icon {display:grid;width:31px;min-width:31px;flex-basis:31px;height:31px;font-size:17px;}
+  .lesk-v3-left.lesk-v3-top {grid-column:1;grid-row:2;}
+  .lesk-v3-right.lesk-v3-top {grid-column:2;grid-row:2;}
+  .lesk-v3-left.lesk-v3-bottom {grid-column:1;grid-row:3;}
+  .lesk-v3-right.lesk-v3-bottom {grid-column:2;grid-row:3;}
+}
