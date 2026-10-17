@@ -1880,3 +1880,14 @@ p {
   .lesk-v5-mobile h1 {font-size:35px;}
   .lesk-v5-service {padding:10px 7px;font-size:11px;}
 }
+
+/* Recorte responsivo da mesma arte original em AVIF, sem baixar um segundo arquivo. */
+@media(max-width:920px) {
+  .lesk-v5-center-art {
+    width:368px;max-width:100%;height:273px;
+    background-image:url("../images/lesk-v5-desktop.avif");
+    background-repeat:no-repeat;
+    background-size:1324px 273px;
+    background-position:-668px 0;
+  }
+}
