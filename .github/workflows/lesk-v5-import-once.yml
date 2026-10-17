@@ -1,0 +1,44 @@
+name: "LESK V5 asset import - one time"
+on:
+  push:
+    branches:
+      - "feat/topo-lesk-v5-original"
+    paths:
+      - ".github/workflows/lesk-v5-import-once.yml"
+permissions:
+  contents: write
+jobs:
+  import-artwork:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Download approved original Canva visual
+        env:
+          SOURCE_URL: "https://export-download.canva.com/b465d6bc-e663-4626-828e-30a0b63427a3/0/0001-7393178091433622249.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAQYCGKMUH5AO7UJ26%2F20261017%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261017T083307Z&X-Amz-Expires=51423&X-Amz-Signature=d9f66f9be24c6a6ee37f3f91b3e6484f345ebacfab17dda5276789f84690d855&X-Amz-SignedHeaders=host%3Bx-amz-expected-bucket-owner&response-expires=Sat%2C%2017%20Oct%202026%2022%3A50%3A10%20GMT"
+        run: |
+          curl --fail --location --retry 3 --silent --show-error "$SOURCE_URL" --output /tmp/lesk-original.png
+          python3 -m pip install --quiet pillow
+      - name: Crop and optimize faithful original artwork
+        run: |
+          python3 - <<'PY'
+          from PIL import Image
+          from pathlib import Path
+          img = Image.open('/tmp/lesk-original.png').convert('RGB')
+          if img.size != (1324, 328):
+              raise RuntimeError(f'Unexpected source size: {img.size}')
+          out = Path('assets/images')
+          out.mkdir(parents=True, exist_ok=True)
+          img.crop((0,55,1324,328)).save(out/'lesk-v5-desktop.webp',format='WEBP',quality=73,method=6)
+          img.crop((668,55,1036,328)).save(out/'lesk-v5-mobile.webp',format='WEBP',quality=73,method=6)
+          print('desktop and mobile image assets created')
+          PY
+      - name: Commit permanent assets and remove temporary workflow
+        run: |
+          rm -f .github/workflows/lesk-v5-import-once.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/images/lesk-v5-desktop.webp assets/images/lesk-v5-mobile.webp .github/workflows/lesk-v5-import-once.yml
+          git commit -m "assets(site): store V5 original concept 1 artwork locally"
+          git push origin HEAD:feat/topo-lesk-v5-original
