@@ -1891,3 +1891,18 @@ p {
     background-position:-668px 0;
   }
 }
+
+/* Página de projetos e chamada compacta na página inicial. */
+.projects-teaser { margin-bottom: 0; align-items: center; }
+.projects-teaser > div { max-width: 740px; }
+.projects-teaser p:not(.eyebrow) { margin-top: 18px; }
+.projects-teaser > .button { flex-shrink: 0; }
+.portfolio-intro h1 { font-size: clamp(2.3rem, 5vw, 4rem); max-width: 900px; }
+.portfolio-intro > p:not(.eyebrow) { max-width: 700px; margin-top: 22px; }
+.portfolio-intro > .text-link { margin-top: 20px; }
+.automation-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+#navigation a[aria-current="page"] { color: var(--green); }
+@media (max-width: 760px) {
+  .projects-teaser { flex-direction: column; align-items: flex-start; }
+  .automation-grid { grid-template-columns: 1fr; }
+}
