@@ -3,117 +3,283 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>LESK Tecnologia — Soluções simples para o seu negócio</title>
-  <meta name="description" content="Conheça a LESK Tecnologia: criação de sites, agendamentos, vitrines digitais e ferramentas para pequenos negócios.">
-  <meta name="theme-color" content="#0b0b0b">
+  <title>LESK Tecnologia — Tecnologia feita para negócios reais</title>
+  <meta name="description" content="Sites, agendamentos, vitrines digitais, macros e automações para pequenos negócios e profissionais.">
+  <meta name="theme-color" content="#07110c">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:site_name" content="LESK Tecnologia">
-  <meta property="og:title" content="LESK Tecnologia — Tecnologia que simplifica.">
-  <meta property="og:description" content="Soluções digitais simples e acessíveis para pequenos negócios e profissionais. Conheça o ecossistema LESK.">
-  <!-- Definir og:url e canonical somente quando houver domínio oficial.
-      Adicionar og:image quando houver uma imagem oficial de compartilhamento. -->
+  <meta property="og:title" content="LESK Tecnologia — Tecnologia feita para negócios reais">
+  <meta property="og:description" content="Soluções digitais para organizar, apresentar e automatizar negócios reais.">
   <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/css/style.css?v=topo-v5-original-2">
+  <link rel="stylesheet" href="assets/css/style.css?v=home-v2-base">
+  <link rel="stylesheet" href="assets/css/home-v2.css?v=1">
   <script src="assets/js/config.js" defer></script>
   <script src="assets/js/main.js" defer></script>
 </head>
-<body>
+<body class="home-v2-page">
   <a class="skip-link" href="#main">Pular para o conteúdo</a>
-  <header class="site-header">
-    <div class="container header-inner">
+
+  <header class="site-header home-v2-header">
+    <div class="home-v2-container header-inner">
       <a class="brand" href="#inicio" aria-label="LESK Tecnologia — início">
         <span class="brand-symbol-lk" aria-hidden="true">
-
-          <span class="brand-l">
-            <span class="l-stem"></span>
-            <span class="l-base"></span>
-          </span>
-
-          <span class="brand-k">
-            <span class="k-stem"></span>
-            <span class="k-arm k-arm-top"></span>
-            <span class="k-arm k-arm-bottom"></span>
-          </span>
-
+          <span class="brand-l"><span class="l-stem"></span><span class="l-base"></span></span>
+          <span class="brand-k"><span class="k-stem"></span><span class="k-arm k-arm-top"></span><span class="k-arm k-arm-bottom"></span></span>
         </span>
-
-        <span class="brand-name">
-          LESK
-          <small>TECNOLOGIA</small>
-        </span>
+        <span class="brand-name">LESK<small>TECNOLOGIA</small></span>
       </a>
-      <button class="menu-toggle" type="button" aria-controls="navigation" aria-expanded="false">Menu <span aria-hidden="true">☰</span></button>
+
+      <button class="menu-toggle" type="button" aria-controls="navigation" aria-expanded="false">
+        Menu <span aria-hidden="true">☰</span>
+      </button>
+
       <nav id="navigation" aria-label="Navegação principal">
-        <a href="#inicio">Início</a><a href="projetos.html">Projetos</a><a href="#sobre">Sobre</a><a href="#contato">Contato</a>
-        <a class="button button-small" href="#contato">Falar com a LESK <span aria-hidden="true">↓</span></a>
+        <a href="#inicio">Início</a>
+        <a href="#solucoes">Soluções</a>
+        <a href="projetos.html">Projetos</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contato">Contato</a>
+        <a class="home-v2-whatsapp-mini" href="#contato" data-contact="whatsapp">
+          <span aria-hidden="true">◉</span> Falar no WhatsApp
+        </a>
       </nav>
     </div>
   </header>
+
   <main id="main">
-    <section id="inicio" class="lesk-v5" aria-labelledby="hero-title">
-      <div class="lesk-v5-desktop">
-        <h1 class="lesk-v5-visually-hidden" id="hero-title">Tecnologia simples para negócios reais crescerem.</h1>
-        <p class="lesk-v5-visually-hidden">Criamos sites, vitrines digitais, agendamentos e ferramentas simples para organizar e divulgar o seu negócio.</p>
-        <img class="lesk-v5-original-poster" src="assets/images/lesk-v5-desktop.avif" alt="" width="1324" height="273" fetchpriority="high" decoding="async">
-        <div class="lesk-v5-ctas-cover" aria-hidden="true"></div>
-        <div class="lesk-v5-live-ctas">
-          <a href="projetos.html"><span aria-hidden="true">▦</span> Veja nossos projetos</a>
-          <a href="#contato"><span aria-hidden="true">◉</span> Falar com a LESK</a>
+    <section id="inicio" class="home-v2-hero" aria-labelledby="hero-title">
+      <div class="home-v2-hero-glow" aria-hidden="true"></div>
+      <div class="home-v2-container home-v2-hero-grid">
+        <div class="home-v2-hero-copy">
+          <p class="home-v2-kicker">SOLUÇÕES DIGITAIS</p>
+          <h1 id="hero-title">Tecnologia feita para <span>negócios reais.</span></h1>
+          <p class="home-v2-lead">Desenvolvemos sites, sistemas, agendamentos, vitrines e automações para ajudar sua empresa a organizar, vender e crescer.</p>
+
+          <div class="home-v2-actions">
+            <a class="home-v2-button home-v2-button-primary" href="#contato" data-contact="whatsapp">
+              <span aria-hidden="true">◉</span> Solicitar orçamento
+            </a>
+            <a class="home-v2-button home-v2-button-secondary" href="projetos.html">
+              Ver projetos <span aria-hidden="true">→</span>
+            </a>
+          </div>
+
+          <div class="home-v2-mini-benefits" aria-label="Diferenciais da LESK">
+            <span>✦ Soluções práticas</span>
+            <span>◈ Mais organização</span>
+            <span>▥ Foco em resultado</span>
+          </div>
         </div>
-      </div>
-      <div class="lesk-v5-mobile">
-        <div class="lesk-v5-pill">SOLUÇÕES DIGITAIS PARA PEQUENOS NEGÓCIOS</div>
-        <h1>Tecnologia simples para <span>negócios reais crescerem.</span></h1>
-        <p class="lesk-v5-desc">Criamos sites, vitrines digitais, agendamentos e ferramentas simples para divulgar e organizar seu negócio.</p>
-        <div class="lesk-v5-mobile-ctas">
-          <a href="projetos.html">Veja nossos projetos <span aria-hidden="true">↓</span></a>
-          <a href="#contato">Falar com a LESK <span aria-hidden="true">↗</span></a>
-        </div>
-        <div class="lesk-v5-center-art" role="img" aria-label="Marca LESK Tecnologia em placa metálica com reflexos verdes"></div>
-        <div class="lesk-v5-services" aria-label="Soluções LESK">
-          <div class="lesk-v5-service"><span aria-hidden="true">▦</span><div>Studio Agenda<small>Agendamentos online</small></div></div>
-          <div class="lesk-v5-service"><span aria-hidden="true">◇</span><div>LESK Vitrine<small>Catálogo e pedidos</small></div></div>
-          <div class="lesk-v5-service"><span aria-hidden="true">▱</span><div>Sites Profissionais<small>Presença digital</small></div></div>
-          <div class="lesk-v5-service"><span aria-hidden="true">▥</span><div>LESK Financeiro<small>Organização financeira</small></div></div>
+
+        <div class="home-v2-devices" aria-label="Prévia visual do Studio Agenda e LESK Vitrine">
+          <div class="home-v2-orbit home-v2-orbit-green" aria-hidden="true"></div>
+          <div class="home-v2-orbit home-v2-orbit-purple" aria-hidden="true"></div>
+
+          <div class="home-v2-laptop">
+            <div class="home-v2-laptop-screen">
+              <div class="home-v2-appbar">
+                <span class="home-v2-app-brand"><span>▦</span> Studio Agenda</span>
+                <span class="home-v2-app-dots">•••</span>
+              </div>
+              <div class="home-v2-app-layout">
+                <aside>
+                  <b>Painel</b>
+                  <span>Agenda</span>
+                  <span>Clientes</span>
+                  <span>Serviços</span>
+                  <span>Profissionais</span>
+                </aside>
+                <div class="home-v2-schedule">
+                  <div class="home-v2-schedule-title"><b>Agenda da semana</b><small>Organização em um só lugar</small></div>
+                  <div class="home-v2-days">
+                    <span>Seg</span><span>Ter</span><span>Qua</span><span>Qui</span>
+                  </div>
+                  <div class="home-v2-slots">
+                    <span class="green">09:00<br><small>Corte</small></span>
+                    <span class="purple">10:30<br><small>Coloração</small></span>
+                    <span class="blue">14:00<br><small>Hidratação</small></span>
+                    <span class="pink">15:30<br><small>Manicure</small></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="home-v2-laptop-base" aria-hidden="true"></div>
+          </div>
+
+          <div class="home-v2-phone">
+            <div class="home-v2-phone-speaker" aria-hidden="true"></div>
+            <div class="home-v2-phone-screen">
+              <img src="assets/images/home-v2/lesk-vitrine.png" alt="" width="64" height="64" decoding="async">
+              <span class="home-v2-phone-label">LESK Vitrine</span>
+              <strong>Musa Fit</strong>
+              <p>Vitrine digital para apresentar produtos e facilitar vendas.</p>
+              <span class="home-v2-phone-cta">Ver produtos</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
-    <section id="solucoes" class="section solutions" aria-labelledby="projects-teaser-title">
-      <div class="container section-heading projects-teaser">
-        <div><p class="eyebrow">PROJETOS LESK</p><h2 id="projects-teaser-title">Veja nossas soluções em ação.</h2><p>Conheça os sistemas e as automações que desenvolvemos para facilitar o dia a dia.</p></div>
-        <a class="button" href="projetos.html">Veja nossos projetos <span aria-hidden="true">→</span></a>
+
+    <section id="solucoes" class="home-v2-section home-v2-solutions" aria-labelledby="solutions-title">
+      <div class="home-v2-container">
+        <div class="home-v2-section-heading">
+          <div>
+            <p class="home-v2-kicker">O QUE A LESK FAZ</p>
+            <h2 id="solutions-title">Soluções digitais para o <span>seu negócio</span></h2>
+          </div>
+          <p>Quatro frentes simples, cada uma ligada a projetos que você pode conhecer na prática.</p>
+        </div>
+
+        <div class="home-v2-service-grid">
+          <a class="home-v2-service-card" href="projetos.html#demo-agenda">
+            <span class="home-v2-service-icon" aria-hidden="true">▦</span>
+            <div><h3>Agendamentos</h3><p>Agenda online, clientes, serviços e rotina organizada.</p><small>Ex.: Studio Agenda</small></div>
+            <span class="home-v2-card-arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a class="home-v2-service-card" href="projetos.html#demo-vitrine">
+            <span class="home-v2-service-icon" aria-hidden="true">◇</span>
+            <div><h3>Vitrines Digitais</h3><p>Apresente produtos e facilite o caminho até a venda.</p><small>Ex.: LESK Vitrine</small></div>
+            <span class="home-v2-card-arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a class="home-v2-service-card" href="projetos.html">
+            <span class="home-v2-service-icon" aria-hidden="true">▱</span>
+            <div><h3>Sites Profissionais</h3><p>Presença online clara, rápida e feita para o seu negócio.</p><small>Ex.: CFG Polimentos</small></div>
+            <span class="home-v2-card-arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a class="home-v2-service-card" href="projetos.html#automation-title">
+            <span class="home-v2-service-icon" aria-hidden="true">⌘</span>
+            <div><h3>Macros &amp; Automações</h3><p>Automatize tarefas repetitivas, sequências e rotinas.</p><small>Ex.: LK AutoClick e LK Drop</small></div>
+            <span class="home-v2-card-arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+
+        <div class="home-v2-center-link">
+          <a class="home-v2-button home-v2-button-secondary" href="projetos.html">Conheça todos os projetos <span aria-hidden="true">→</span></a>
+        </div>
       </div>
     </section>
-    <section id="sobre" class="section container about about-compact" aria-labelledby="about-title">
-      <div>
-        <p class="eyebrow">SOBRE A LESK</p>
-        <h2 id="about-title">Tecnologia útil.<br><span>Sem complicação.</span></h2>
-      </div>
-      <div class="about-compact-copy">
-        <p>Desenvolvemos soluções digitais para profissionais e pequenos negócios, com foco em clareza, praticidade e atendimento próximo.</p>
-        <p class="about-compact-detail">Desenvolvimento com formação superior em Análise e Desenvolvimento de Sistemas.</p>
+
+    <section class="home-v2-section home-v2-featured" aria-labelledby="featured-title">
+      <div class="home-v2-container">
+        <div class="home-v2-section-heading">
+          <div>
+            <p class="home-v2-kicker">PROJETOS EM DESTAQUE</p>
+            <h2 id="featured-title">Veja na prática algumas <span>soluções da LESK</span></h2>
+          </div>
+          <a class="home-v2-text-link" href="projetos.html">Ver todos os projetos →</a>
+        </div>
+
+        <div class="home-v2-project-grid">
+          <article class="home-v2-project-card">
+            <div class="home-v2-thumb home-v2-thumb-lene">
+              <img src="assets/images/home-v2/studio-agenda.svg" alt="" width="74" height="74" loading="lazy" decoding="async">
+              <div><b>Ateliê da Lene</b><span>Salão de beleza</span></div>
+            </div>
+            <div class="home-v2-project-copy">
+              <p class="home-v2-project-type">STUDIO AGENDA</p>
+              <h3>Ateliê da Lene</h3>
+              <p>Agendamento online e organização da rotina do salão.</p>
+              <div class="home-v2-project-actions">
+                <a href="https://studio-agenda-production.up.railway.app/b/atelie-da-lene/" target="_blank" rel="noopener noreferrer">Ver projeto ↗</a>
+                <a href="https://www.instagram.com/reel/DdfGUe8xg8N/" target="_blank" rel="noopener noreferrer">Ver vídeo ▶</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="home-v2-project-card">
+            <div class="home-v2-thumb home-v2-thumb-musa">
+              <img src="assets/images/home-v2/lesk-vitrine.png" alt="" width="74" height="74" loading="lazy" decoding="async">
+              <div><b>Musa Fit</b><span>Moda fitness</span></div>
+            </div>
+            <div class="home-v2-project-copy">
+              <p class="home-v2-project-type">LESK VITRINE</p>
+              <h3>Musa Fit</h3>
+              <p>Vitrine digital com catálogo de produtos e foco em vendas.</p>
+              <div class="home-v2-project-actions">
+                <a href="https://lesk-vitrine-production.up.railway.app/v/musa-fit/" target="_blank" rel="noopener noreferrer">Ver projeto ↗</a>
+                <a href="https://www.instagram.com/reel/DeUd0DYRbII/" target="_blank" rel="noopener noreferrer">Ver vídeo ▶</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="home-v2-project-card">
+            <div class="home-v2-thumb home-v2-thumb-cfg">
+              <img src="assets/images/home-v2/cfg-polimentos.avif" alt="Prévia visual do site CFG Polimentos" width="620" height="349" loading="lazy" decoding="async">
+            </div>
+            <div class="home-v2-project-copy">
+              <p class="home-v2-project-type">SITE PROFISSIONAL</p>
+              <h3>CFG Polimentos</h3>
+              <p>Apresentação de serviços e contato com visual automotivo.</p>
+              <div class="home-v2-project-actions">
+                <a href="https://cfg-polimentos-piloto-production.up.railway.app/" target="_blank" rel="noopener noreferrer">Ver site ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="home-v2-project-card">
+            <div class="home-v2-thumb home-v2-thumb-auto">
+              <img src="assets/images/home-v2/lk-autoclick.png" alt="Mouse usado no projeto LK AutoClick" width="256" height="366" loading="lazy" decoding="async">
+              <div><b>LK AutoClick</b><span>Macro &amp; automação</span></div>
+            </div>
+            <div class="home-v2-project-copy">
+              <p class="home-v2-project-type">AUTOMAÇÃO</p>
+              <h3>LK AutoClick</h3>
+              <p>Automação de cliques e atalhos para rotinas repetitivas.</p>
+              <div class="home-v2-project-actions">
+                <a href="https://github.com/DevLESK/lesk-auto-click" target="_blank" rel="noopener noreferrer">Ver projeto ↗</a>
+              </div>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
-    <section id="contato" class="container contact" aria-labelledby="contact-title">
-      <div>
-        <p class="eyebrow">VAMOS CONVERSAR</p>
-        <h2 id="contact-title">Vamos colocar sua ideia em prática?</h2>
-        <p>Conheça nossas soluções ou converse sobre um site para o seu negócio.</p>
+
+    <section id="sobre" class="home-v2-why" aria-labelledby="why-title">
+      <div class="home-v2-container home-v2-why-grid">
+        <h2 id="why-title">Por que escolher a <span>LESK?</span></h2>
+        <div><b>⚡ Atendimento direto</b><span>Conversa clara e foco na necessidade.</span></div>
+        <div><b>◇ Solução sob medida</b><span>Tecnologia aplicada à realidade do negócio.</span></div>
+        <div><b>◉ Acompanhamento</b><span>Suporte e evolução depois da entrega.</span></div>
       </div>
-      <div class="contact-actions">
-        <a class="contact-chip contact-chip-whatsapp" href="https://wa.me/5521991448401" data-contact="whatsapp" target="_blank" rel="noopener noreferrer">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 11.5a8.5 8.5 0 0 1-12.9 7.3L3 20l1.2-4.6a8.5 8.5 0 1 1 16.3-3.9Z"/><path d="m9.2 9.2 1.1 2.3 2.2 2.2 2.3 1.1"/></svg>
-          <span>WhatsApp</span><span aria-hidden="true">↗</span>
-        </a>
-        <a class="contact-chip contact-chip-instagram" href="https://www.instagram.com/lesk_tecnologia/" data-contact="instagram" target="_blank" rel="noopener noreferrer">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.75" fill="currentColor" stroke="none"/></svg>
-          <span>Instagram</span><span aria-hidden="true">↗</span>
-        </a>
+    </section>
+
+    <section id="contato" class="home-v2-contact" aria-labelledby="contact-title">
+      <div class="home-v2-container home-v2-contact-box">
+        <div>
+          <p class="home-v2-kicker">VAMOS CONVERSAR</p>
+          <h2 id="contact-title">Tem uma ideia ou precisa <span>melhorar o seu negócio?</span></h2>
+        </div>
+        <p>Fale com a LESK, tire suas dúvidas e solicite um orçamento sem complicação.</p>
+        <div class="home-v2-contact-actions">
+          <a class="home-v2-button home-v2-button-primary" href="#contato" data-contact="whatsapp"><span aria-hidden="true">◉</span> Solicitar orçamento</a>
+          <a class="home-v2-button home-v2-button-instagram" href="https://www.instagram.com/lesk_tecnologia/" data-contact="instagram" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+        </div>
         <p id="contact-notice" class="contact-notice" tabindex="-1">Canais oficiais da LESK Tecnologia.</p>
       </div>
     </section>
-    </main>
-  <footer class="container site-footer"><div class="footer-top"><a class="brand" href="#inicio"><span>LESK<small>TECNOLOGIA</small></span></a><p>Tecnologia simples. Possibilidades reais.</p><nav aria-label="Navegação do rodapé"><a href="#inicio">Início</a><a href="projetos.html">Projetos</a><a href="#sobre">Sobre</a><a href="#contato">Contato</a><a href="#contato" data-contact="whatsapp">WhatsApp</a><a href="https://www.instagram.com/lesk_tecnologia/" data-contact="instagram" target="_blank" rel="noopener noreferrer">Instagram</a></nav></div><div class="footer-bottom"><p>© <span id="year">2026</span> LESK Tecnologia. Todos os direitos reservados.</p><p>Soluções digitais para o dia a dia.</p></div></footer>
+  </main>
+
+  <footer class="home-v2-footer">
+    <div class="home-v2-container home-v2-footer-main">
+      <a class="brand" href="#inicio" aria-label="LESK Tecnologia — início">
+        <span class="brand-symbol-lk" aria-hidden="true">
+          <span class="brand-l"><span class="l-stem"></span><span class="l-base"></span></span>
+          <span class="brand-k"><span class="k-stem"></span><span class="k-arm k-arm-top"></span><span class="k-arm k-arm-bottom"></span></span>
+        </span>
+        <span class="brand-name">LESK<small>TECNOLOGIA</small></span>
+      </a>
+      <p>Soluções digitais para <strong>negócios reais.</strong></p>
+      <nav aria-label="Navegação do rodapé">
+        <a href="projetos.html">Projetos</a>
+        <a href="#contato" data-contact="whatsapp">WhatsApp</a>
+        <a href="https://www.instagram.com/lesk_tecnologia/" data-contact="instagram" target="_blank" rel="noopener noreferrer">Instagram</a>
+      </nav>
+    </div>
+    <div class="home-v2-container home-v2-footer-bottom">© <span id="year">2026</span> LESK Tecnologia. Todos os direitos reservados.</div>
+  </footer>
 </body>
 </html>
