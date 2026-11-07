@@ -257,8 +257,20 @@
 .home-v2-thumb-musa{background:radial-gradient(circle at 80% 20%,rgba(255,255,255,.08),transparent 28%),linear-gradient(135deg,#2a0d42,#7c1c80 58%,#16051f)}
 .home-v2-thumb.home-v2-thumb-lene,
 .home-v2-thumb.home-v2-thumb-musa{padding:0}
+/* As duas capturas devem ocupar a altura integral da miniatura, sem recorte. */
 .home-v2-thumb.home-v2-thumb-lene>img,
-.home-v2-thumb.home-v2-thumb-musa>img{position:absolute;inset:0;width:100%;height:100%;max-width:none;max-height:none;object-fit:contain;border-radius:0}
+.home-v2-thumb.home-v2-thumb-musa>img{
+  position:absolute;
+  inset:0;
+  display:block;
+  width:100%;
+  height:100%;
+  max-width:none;
+  max-height:none;
+  object-fit:contain;
+  object-position:center;
+  border-radius:0;
+}
 .home-v2-thumb-cfg{padding:0;background:#080b0a}.home-v2-thumb-cfg>img{width:100%;height:100%;max-width:none;max-height:none;object-fit:cover}
 .home-v2-thumb-auto{background:radial-gradient(circle at 70% 40%,rgba(0,239,114,.28),transparent 36%),linear-gradient(135deg,#07130d,#092c19)}
 .home-v2-thumb-auto>img{width:88px;height:125px;object-fit:contain;filter:drop-shadow(0 0 18px rgba(0,239,114,.23))}
