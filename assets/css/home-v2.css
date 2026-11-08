@@ -449,10 +449,10 @@
 }
 
 /* Home V2 — previews de produtos nos dispositivos do Hero (escopo isolado). */
-.home-v2-laptop-screen{display:flex;align-items:center;justify-content:center;padding:10px;background:linear-gradient(145deg,#08140f,#030806)}
-.home-v2-laptop-screen>.home-v2-device-preview{display:block;width:100%;height:100%;max-width:none;max-height:none;object-fit:contain;object-position:center;border-radius:9px}
+.home-v2-laptop-screen{aspect-ratio:auto;display:flex;align-items:center;justify-content:center;padding:10px;background:linear-gradient(145deg,#08140f,#030806)}
+.home-v2-laptop-screen>.home-v2-device-preview{display:block;width:100%;height:auto;max-width:none;max-height:none;object-fit:contain;object-position:center;border-radius:9px}
 .home-v2-phone{z-index:2;right:0;bottom:2px;width:clamp(112px,24%,155px);transform:rotate(3deg)}
-.home-v2-phone-screen{display:block;min-height:0;aspect-ratio:240/300;padding:0;overflow:hidden;background:#130b1d}
+.home-v2-phone-screen{display:block;min-height:0;aspect-ratio:690/1185;padding:0;overflow:hidden;background:#130b1d}
 .home-v2-phone-screen>.home-v2-device-preview{position:static;display:block;width:100%;height:100%;max-width:none;max-height:none;object-fit:contain;border-radius:0;opacity:1}
 .home-v2-devices{isolation:isolate}
 .home-v2-thumb.home-v2-thumb-lene>img,.home-v2-thumb.home-v2-thumb-musa>img{object-fit:contain;object-position:center;width:100%;height:100%;max-width:none;max-height:none}
