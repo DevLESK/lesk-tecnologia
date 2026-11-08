@@ -490,3 +490,23 @@
   .home-v2-section-heading>p{font-size:.82rem;line-height:1.5}
   .home-v2-contact-box>p{font-size:.82rem;line-height:1.5}
 }
+
+/* Home V2 — projetos mobile: formato horizontal aprovado, sem alterar outras secoes. */
+@media (max-width:600px){
+  .home-v2-project-grid{gap:14px}
+  .home-v2-project-card{grid-template-columns:clamp(108px,32%,132px) minmax(0,1fr);min-height:164px;border-radius:13px}
+  .home-v2-thumb{min-height:164px;padding:8px}
+  .home-v2-thumb.home-v2-thumb-lene,.home-v2-thumb.home-v2-thumb-musa{padding:0}
+  .home-v2-project-copy{min-width:0;padding:14px 12px;justify-content:center}
+  .home-v2-project-copy h3{font-size:1rem;line-height:1.22}
+  .home-v2-project-copy>p{margin-top:7px;font-size:.76rem;line-height:1.45;overflow-wrap:anywhere}
+  .home-v2-project-actions{gap:7px;margin-top:12px}
+  .home-v2-project-actions a{min-height:44px;padding:0 6px;font-size:.7rem;line-height:1.2;text-align:center;white-space:normal}
+  .home-v2-thumb-auto>img{width:54px;height:80px}
+}
+@media (max-width:375px){
+  .home-v2-project-card{grid-template-columns:100px minmax(0,1fr)}
+  .home-v2-project-copy{padding:12px 10px}
+  .home-v2-project-actions{grid-template-columns:1fr}
+  .home-v2-project-actions a{min-height:42px}
+}
