@@ -642,3 +642,31 @@
   .home-v2-key{border-width:1px;border-bottom-width:1px;border-radius:1px}
   .home-v2-trackpad{margin-top:2px}
 }
+
+
+/* EXECUTOR 07 — intentionally simple tablet, no fake laptop geometry. */
+.home-v2-laptop.home-v2-tablet{
+  width:min(560px,92%);
+  transform:perspective(1100px) rotateY(-3deg);
+  filter:none;
+}
+.home-v2-tablet .home-v2-tablet-screen{
+  aspect-ratio:auto;
+  display:flex;align-items:center;justify-content:center;
+  padding:clamp(7px,1vw,12px);
+  border:2px solid #555c64;
+  border-radius:clamp(14px,2vw,22px);
+  background:linear-gradient(145deg,#292e35,#090c11 65%,#282b34);
+  box-shadow:inset 0 1px 2px rgba(255,255,255,.23),0 25px 45px rgba(0,0,0,.5),0 0 40px rgba(0,239,114,.1);
+}
+.home-v2-tablet .home-v2-tablet-screen>.home-v2-device-preview{
+  display:block;width:100%;height:auto;object-fit:contain;border-radius:clamp(7px,1vw,11px);
+}
+.home-v2-tablet .home-v2-tablet-screen::after{
+  border-radius:inherit;
+  background:linear-gradient(125deg,rgba(255,255,255,.035),transparent 32%,transparent 76%,rgba(255,255,255,.02));
+}
+@media(max-width:760px){
+  .home-v2-laptop.home-v2-tablet{width:88%;transform:perspective(900px) rotateY(-2deg)}
+  .home-v2-tablet .home-v2-tablet-screen{padding:6px;border-radius:14px}
+}
