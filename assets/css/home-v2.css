@@ -510,3 +510,105 @@
   .home-v2-project-actions{grid-template-columns:1fr}
   .home-v2-project-actions a{min-height:42px}
 }
+
+/* Hero — rodada 1: proporcoes do titulo e dos dispositivos; demais secoes intactas. */
+@media (min-width:1021px){
+  .home-v2-hero-grid{
+    grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);
+    gap:clamp(24px,3vw,44px);
+  }
+  .home-v2-hero-copy h1{
+    font-size:clamp(3.35rem,4.45vw,4.65rem);
+    line-height:1.02;
+  }
+  .home-v2-laptop{
+    width:min(630px,100%);
+    transform:perspective(1200px) rotateY(-3deg) translateX(-8px);
+  }
+  .home-v2-phone{
+    width:clamp(125px,26%,172px);
+    right:-4px;
+    bottom:-3px;
+  }
+}
+@media (max-width:600px){
+  .home-v2-laptop{width:91%}
+  .home-v2-phone{width:27%;right:0;bottom:0}
+}
+
+
+/* Hero 3D — devices only; source screenshots stay untouched. */
+.home-v2-laptop{
+  transform:perspective(1100px) rotateY(-7deg) rotateX(2deg) translateX(-8px);
+  transform-style:preserve-3d;
+  filter:drop-shadow(0 24px 20px rgba(0,0,0,.38));
+}
+.home-v2-laptop-screen{
+  position:relative;
+  overflow:hidden;
+  border:2px solid #4a515a;
+  border-bottom:5px solid #262c32;
+  border-radius:17px 17px 5px 5px;
+  background:#111;
+  box-shadow:inset 0 2px 1px rgba(255,255,255,.28),0 12px 26px rgba(0,0,0,.42),0 0 38px rgba(0,239,114,.09);
+}
+.home-v2-laptop-screen::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(118deg,rgba(255,255,255,.08),transparent 30%,transparent 72%,rgba(255,255,255,.035));
+}
+.home-v2-phone{
+  border:2px solid #777782;
+  border-right:5px solid #4c405e;
+  background:linear-gradient(115deg,#17151d,#050507 40%,#282333);
+  box-shadow:inset 2px 0 1px rgba(255,255,255,.2),0 28px 44px rgba(0,0,0,.64),10px 8px 22px rgba(143,60,255,.14);
+  transform:perspective(800px) rotateY(-10deg) rotateZ(3deg) translateZ(15px);
+  transform-style:preserve-3d;
+}
+.home-v2-phone-screen{position:relative}
+.home-v2-phone-screen::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(112deg,rgba(255,255,255,.12),transparent 28%,transparent 72%,rgba(255,255,255,.04));
+}
+@media (max-width:760px){
+  .home-v2-laptop{transform:perspective(900px) rotateY(-4deg) rotateX(1deg)}
+  .home-v2-phone{transform:perspective(700px) rotateY(-6deg) rotateZ(3deg)}
+}
+@media (prefers-reduced-motion:reduce){
+  .home-v2-laptop,.home-v2-phone{transition:none}
+}
+
+
+/* EXECUTOR 05 — mobile device composition, without touching product captures. */
+@media (max-width:600px){
+  .home-v2-laptop{width:88%;margin-left:0;transform:perspective(900px) rotateY(-3deg) rotateX(2deg)}
+  .home-v2-phone{width:24%;right:-1%;bottom:-7px;transform:perspective(700px) rotateY(-7deg) rotateZ(3deg)}
+}
+
+
+
+/* EXECUTOR 07 — intentionally simple tablet, no fake laptop geometry. */
+.home-v2-laptop.home-v2-tablet{
+  width:min(560px,92%);
+  transform:perspective(1100px) rotateY(-3deg);
+  filter:none;
+}
+.home-v2-tablet .home-v2-tablet-screen{
+  aspect-ratio:auto;
+  display:flex;align-items:center;justify-content:center;
+  padding:clamp(7px,1vw,12px);
+  border:2px solid #555c64;
+  border-radius:clamp(14px,2vw,22px);
+  background:linear-gradient(145deg,#292e35,#090c11 65%,#282b34);
+  box-shadow:inset 0 1px 2px rgba(255,255,255,.23),0 25px 45px rgba(0,0,0,.5),0 0 40px rgba(0,239,114,.1);
+}
+.home-v2-tablet .home-v2-tablet-screen>.home-v2-device-preview{
+  display:block;width:100%;height:auto;object-fit:contain;border-radius:clamp(7px,1vw,11px);
+}
+.home-v2-tablet .home-v2-tablet-screen::after{
+  border-radius:inherit;
+  background:linear-gradient(125deg,rgba(255,255,255,.035),transparent 32%,transparent 76%,rgba(255,255,255,.02));
+}
+@media(max-width:760px){
+  .home-v2-laptop.home-v2-tablet{width:88%;transform:perspective(900px) rotateY(-2deg)}
+  .home-v2-tablet .home-v2-tablet-screen{padding:6px;border-radius:14px}
+}
