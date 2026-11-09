@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Studio Agenda">
+  <rect width="512" height="512" rx="106" fill="#171717"/>
+  <rect x="101" y="128" width="310" height="283" rx="48" fill="#ffffff"/>
+  <path d="M101 203h310" stroke="#171717" stroke-width="32"/>
+  <path d="M181 91v80M331 91v80" stroke="#ffffff" stroke-width="32" stroke-linecap="round"/>
+  <path d="m181 309 48 48 106-123" fill="none" stroke="#c78b45" stroke-width="35" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
