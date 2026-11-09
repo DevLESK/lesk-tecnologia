@@ -556,23 +556,6 @@
   content:"";position:absolute;inset:0;pointer-events:none;
   background:linear-gradient(118deg,rgba(255,255,255,.08),transparent 30%,transparent 72%,rgba(255,255,255,.035));
 }
-.home-v2-laptop-base{
-  position:relative;
-  width:114%;margin-left:-7%;height:clamp(30px,3.8vw,55px);
-  transform:perspective(600px) rotateX(57deg);
-  transform-origin:top center;
-  border:1px solid #535960;border-top:4px solid #70777c;
-  border-radius:3px 3px 19px 19px;
-  background:
-    linear-gradient(90deg,transparent 9%,rgba(12,18,20,.88) 10%,rgba(12,18,20,.88) 90%,transparent 91%) center 26%/90% 40% no-repeat,
-    repeating-linear-gradient(90deg,transparent 0 7%,rgba(112,124,132,.45) 7.2% 7.8%) center 26%/80% 27% no-repeat,
-    linear-gradient(180deg,#737d83 0%,#3a4249 55%,#161b20 100%);
-  box-shadow:0 17px 28px rgba(0,0,0,.55),0 2px 3px rgba(255,255,255,.12) inset;
-}
-.home-v2-laptop-base::after{
-  content:"";position:absolute;left:39%;right:39%;bottom:5px;height:5px;
-  border-radius:0 0 8px 8px;background:rgba(10,13,17,.35);
-}
 .home-v2-phone{
   border:2px solid #777782;
   border-right:5px solid #4c405e;
@@ -588,7 +571,6 @@
 }
 @media (max-width:760px){
   .home-v2-laptop{transform:perspective(900px) rotateY(-4deg) rotateX(1deg)}
-  .home-v2-laptop-base{height:clamp(18px,4vw,32px)}
   .home-v2-phone{transform:perspective(700px) rotateY(-6deg) rotateZ(3deg)}
 }
 @media (prefers-reduced-motion:reduce){
@@ -599,49 +581,9 @@
 /* EXECUTOR 05 — mobile device composition, without touching product captures. */
 @media (max-width:600px){
   .home-v2-laptop{width:88%;margin-left:0;transform:perspective(900px) rotateY(-3deg) rotateX(2deg)}
-  .home-v2-laptop-base{
-    width:114%;margin-left:-7%;height:clamp(25px,6vw,34px);
-    background:
-      repeating-linear-gradient(90deg,#1d242a 0 5.5%,#657078 5.5% 6.2%,#1d242a 6.2% 7.3%) center 24%/83% 38% no-repeat,
-      linear-gradient(180deg,#737d83 0%,#3a4249 55%,#161b20 100%);
-  }
   .home-v2-phone{width:24%;right:-1%;bottom:-7px;transform:perspective(700px) rotateY(-7deg) rotateZ(3deg)}
 }
 
-
-/* EXECUTOR 06 — real keycaps replace the earlier gradient keyboard illusion. */
-.home-v2-laptop-base{
-  display:flex;flex-direction:column;align-items:center;justify-content:flex-start;
-  height:clamp(45px,5.4vw,76px);
-  padding:5px 8% 3px;
-  overflow:hidden;
-  background:linear-gradient(180deg,#78838b 0%,#414c55 13%,#2b343b 74%,#161b20 100%);
-}
-.home-v2-keyboard{
-  width:100%;height:66%;display:flex;flex-direction:column;gap:3px;
-  padding:2px 3px 3px;border-radius:3px;
-  background:#242b31;box-shadow:inset 0 1px 3px rgba(0,0,0,.7);
-}
-.home-v2-key-row{display:flex;flex:1;min-height:0;gap:3px;justify-content:center}
-.home-v2-key{
-  display:block;flex:1;min-width:0;border-radius:2px;
-  border:1px solid #606b73;border-bottom:2px solid #10161b;
-  background:linear-gradient(160deg,#5d6870,#303940 55%,#1b242b);
-  box-shadow:inset 0 1px rgba(255,255,255,.19),0 1px 1px rgba(0,0,0,.5);
-}
-.home-v2-key-space{flex:4}
-.home-v2-trackpad{
-  display:block;width:23%;height:21%;margin-top:3px;
-  border:1px solid #1b242b;border-top-color:#65727b;border-radius:2px;
-  background:linear-gradient(180deg,#46515a,#36414a);
-}
-@media(max-width:760px){
-  .home-v2-laptop-base{height:clamp(30px,6.8vw,48px);padding:3px 7% 2px}
-  .home-v2-keyboard{gap:2px;padding:1px 2px}
-  .home-v2-key-row{gap:2px}
-  .home-v2-key{border-width:1px;border-bottom-width:1px;border-radius:1px}
-  .home-v2-trackpad{margin-top:2px}
-}
 
 
 /* EXECUTOR 07 — intentionally simple tablet, no fake laptop geometry. */
