@@ -612,3 +612,12 @@
   .home-v2-laptop.home-v2-tablet{width:88%;transform:perspective(900px) rotateY(-2deg)}
   .home-v2-tablet .home-v2-tablet-screen{padding:6px;border-radius:14px}
 }
+
+/* Acabamento final: acessibilidade e consistência dos botões */
+.home-v2-visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.home-v2-whatsapp-mini{position:relative;justify-content:center;width:44px;min-width:44px;min-height:44px;padding:0!important;border-radius:12px}
+.home-v2-whatsapp-mini svg{width:23px;height:23px;flex:none}
+.home-v2-button svg{width:19px;height:19px;flex:none}
+.home-v2-button-primary{font-size:.91rem;line-height:1.25;letter-spacing:0;font-weight:750}
+.home-v2-button-instagram{border-color:rgba(205,150,255,.45);background:rgba(143,60,255,.12)}
+.home-v2-button:focus-visible,.home-v2-whatsapp-mini:focus-visible{outline:2px solid #fff;outline-offset:3px}
