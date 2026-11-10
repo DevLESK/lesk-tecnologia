@@ -621,3 +621,7 @@
 .home-v2-button-primary{font-size:.91rem;line-height:1.25;letter-spacing:0;font-weight:750}
 .home-v2-button-instagram{border-color:rgba(205,150,255,.45);background:rgba(143,60,255,.12)}
 .home-v2-button:focus-visible,.home-v2-whatsapp-mini:focus-visible{outline:2px solid #fff;outline-offset:3px}
+
+/* Refinamento visual dos projetos: enquadramento sem distorção */
+.home-v2-thumb.home-v2-thumb-lene>img,.home-v2-thumb.home-v2-thumb-musa>img{object-fit:cover;object-position:center}
+.home-v2-why h2 span{font-size:1.14em;letter-spacing:-.035em}
