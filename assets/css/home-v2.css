@@ -623,5 +623,5 @@
 .home-v2-button:focus-visible,.home-v2-whatsapp-mini:focus-visible{outline:2px solid #fff;outline-offset:3px}
 
 /* Refinamento visual dos projetos: enquadramento sem distorção */
-.home-v2-thumb.home-v2-thumb-lene>img,.home-v2-thumb.home-v2-thumb-musa>img{object-fit:cover;object-position:center}
+.home-v2-thumb.home-v2-thumb-lene>img,.home-v2-thumb.home-v2-thumb-musa>img{object-fit:contain;object-position:center}
 .home-v2-why h2 span{font-size:1.14em;letter-spacing:-.035em}
