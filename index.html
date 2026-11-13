@@ -35,13 +35,17 @@ footer{padding:27px 0}.foot{display:flex;justify-content:space-between;gap:20px;
 .about-mark{background:transparent;padding:0;border-color:#27364b}
 .about-logo-real{display:block;max-width:340px;width:min(100%,340px);height:auto;object-fit:contain}
 @media(max-width:560px){.brand-logo img{width:60px;height:60px}.about-logo-real{max-width:250px}.contact-card{padding:24px}.contact-actions{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.contact-btn{width:100%;min-height:50px;padding:11px 8px;font-size:.88rem}}
+.header-contacts{display:flex;align-items:center;gap:8px;margin-left:auto}.header-contact{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:8px 12px;border-radius:9px;color:#fff;font-size:.8rem;font-weight:800;white-space:nowrap}.header-contact-whatsapp{background:#25d366}.header-contact-instagram{background:linear-gradient(135deg,#833ab4,#e1306c 65%,#f77737)}.header-contact:focus-visible{outline:2px solid #fff;outline-offset:3px}
+@media(max-width:850px){.nav{gap:10px}.header-contacts{margin-left:auto}.header-contact{padding:8px 10px;font-size:.75rem}}
+@media(max-width:560px){.header-contacts{gap:5px}.header-contact{min-height:36px;padding:7px 7px;font-size:.67rem}.menu{padding:7px;font-size:.73rem}.nav{gap:5px}}
 </style>
 </head>
 <body>
 <header><div class="container nav">
 <a class="brand-logo" href="#inicio" aria-label="CFG Pintura e Polimento"><img src="assets/images/emblema-cfg-pintura-polimento.webp" alt="CFG Pintura e Polimento"></a>
 <button class="menu" type="button" aria-controls="menu" aria-expanded="false">Menu ☰</button>
-<nav id="menu"><a href="#servicos">Serviços</a><a href="#trabalhos">Trabalhos</a><a href="#contato">Contato</a><a href="https://www.instagram.com/cfgpolimentos" target="_blank" rel="noopener">Instagram</a><a class="btn" href="https://wa.me/5521989350870?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20CFG%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento." target="_blank" rel="noopener">WhatsApp</a></nav>
+<nav id="menu"><a href="#servicos">Serviços</a><a href="#trabalhos">Trabalhos</a><a href="#contato">Contato</a></nav>
+<div class="header-contacts"><a class="header-contact header-contact-whatsapp" href="https://wa.me/5521989350870?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20CFG%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento." target="_blank" rel="noopener" aria-label="Falar com a CFG pelo WhatsApp">WhatsApp</a><a class="header-contact header-contact-instagram" href="https://www.instagram.com/cfgpolimentos" target="_blank" rel="noopener" aria-label="Abrir Instagram da CFG">Instagram</a></div>
 </div></header>
 <main>
 <section class="impact-banner" aria-label="Destaque visual da CFG Polimentos"><div class="impact-wrap"><img src="assets/images/cfg-hero-impacto.avif" alt="CFG Polimentos com carro vermelho antes do reparo e carro vermelho restaurado" width="1100" height="619" fetchpriority="high" decoding="async"></div></section>
